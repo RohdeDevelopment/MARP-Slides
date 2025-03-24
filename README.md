@@ -10,7 +10,7 @@
 - [ ] chapter slide 2
 - [ ] chapter slide 3
 - [ ] agenda slide
-- [ ] thanks slide
+- [x] thanks slide
 - [ ] image left/right
 - [x] footnote
 - [x] columns
