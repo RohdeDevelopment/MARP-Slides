@@ -17,6 +17,16 @@ paginate: true
 
 ---
 
+<!-- _class: agenda -->
+
+# Agenda
+
+1. Einführung
+2. Folien mit Bild
+3. Folien mit Spalten
+
+---
+
 <!-- _class: chapter -->
 
 # Einführung

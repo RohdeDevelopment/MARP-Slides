@@ -9,7 +9,7 @@
 - [x] chapter slide 1
 - [ ] chapter slide 2
 - [ ] chapter slide 3
-- [ ] agenda slide
+- [x] agenda slide
 - [x] thanks slide
 - [ ] image left/right
 - [x] footnote
