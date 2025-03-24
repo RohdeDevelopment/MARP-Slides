@@ -6,7 +6,7 @@
 - [ ] title slide 2
 - [ ] title slide 3
 - [x] standard slide
-- [ ] chapter slide 1
+- [x] chapter slide 1
 - [ ] chapter slide 2
 - [ ] chapter slide 3
 - [ ] agenda slide

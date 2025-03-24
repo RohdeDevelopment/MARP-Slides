@@ -17,6 +17,16 @@ paginate: true
 
 ---
 
+<!-- _class: chapter -->
+
+# Einführung
+
+## Optionaler Untertitel
+
+![chapter h:720](chapter-msg.png)
+
+---
+
 # Folie erstellen
 
 Folien werden mit --- getrennt
