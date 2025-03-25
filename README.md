@@ -1,5 +1,24 @@
 # marp msg theme
 
+Dies ist kein offizieller Folienmaster!
+
+## Usage
+
+Copy the themes folder to your project, it contains the css file and some images which can be used. You can copy the .vscode folder with settings for using the template.
+
+Add the following header to your Markdown-File:
+
+```markdown
+---
+marp: true
+theme: msg
+header: 
+footer: 
+paginate: true
+
+---
+```
+
 ## Tasks
 
 - [x] title slide 1

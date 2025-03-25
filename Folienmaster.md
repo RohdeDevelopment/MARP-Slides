@@ -1,8 +1,8 @@
 ---
 marp: true
-theme: msg-dev
-header: "Marp Theme msg"
-footer: msg group | Marp Theme msg | 28.03.2025
+theme: msg
+header: Marp Theme msg
+footer: © msg group | Marp Theme msg | 2025
 paginate: true
 
 ---
@@ -13,7 +13,7 @@ paginate: true
 
 ## Jan Tuttas
 
-![title h:720](title-msg.png)
+![title h:720](themes/assets/title-msg.png)
 
 ---
 
@@ -33,7 +33,7 @@ paginate: true
 
 ## Optionaler Untertitel
 
-![chapter h:720](chapter-msg.png)
+![chapter h:720](themes/assets/chapter-msg.png)
 
 ---
 
@@ -107,7 +107,7 @@ Lorem ipsum dolor sit amet¹, consetetur² sadipscing elitr³, sed diam nonumy e
 
 ## Optionaler Untertitel
 
-![chapter h:720](chapter-msg.png)
+![chapter h:720](themes/assets/chapter-msg.png)
 
 ---
 
@@ -151,4 +151,4 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 # Vielen Dank
 
-![title h:720](title-msg.png)
+![title h:720](themes/assets/title-msg.png)
