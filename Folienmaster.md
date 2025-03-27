@@ -147,6 +147,19 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 ---
 
+<!-- _class: timeline -->
+
+# Timeline
+
+- <span>2014
+Event 1</span>
+- <span>2017
+Event 2</span>
+- <span>2021
+Event 3</span>
+
+---
+
 <!-- _class: end -->
 
 # Vielen Dank

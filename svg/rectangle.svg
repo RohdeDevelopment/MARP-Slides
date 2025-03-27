@@ -1,0 +1,9 @@
+<svg width="45" height="515" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 0,0
+             L 25,0
+             Q 45,0 45 ,20
+             L 45,515
+             L 0,515
+             Z"
+          fill="white" stroke="none" stroke-width="2"/>
+</svg>

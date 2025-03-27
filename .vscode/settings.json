@@ -1,7 +1,7 @@
 {
     "markdown.marp.themes": [
       // [online, latest]
-      //"https://gitlab.zt.msg.team/tuttaj/marp-msg-theme/-/raw/main/themes/msg.css"
+      //"https://gitlab.msg.team/tuttaj/marp-msg-theme/-/raw/main/themes/msg.css"
   
       /* [offline, development, default]
        * - use local css files
