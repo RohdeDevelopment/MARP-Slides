@@ -407,3 +407,316 @@ section.timeline>ul li:nth-child(even) span {
     white-space: nowrap;
     color: var(--msg-black);
 }
+
+/* ========================================
+   LAYOUT COMPONENTS
+   Reusable layout patterns for presentations
+   ======================================== */
+
+/* ========== Table Styling ========== */
+section table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14pt;
+    margin-top: 20px;
+}
+
+section thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 2px solid var(--msg-red);
+    color: var(--msg-red);
+}
+
+section tbody tr {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+section tbody tr:nth-child(even) {
+    background: #F5F5F5;
+}
+
+section tbody td {
+    padding: 10px 12px;
+}
+
+section tbody td:first-child {
+    font-weight: 700;
+    color: var(--msg-red);
+}
+
+/* ========== Grid Layouts ========== */
+.msg-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.msg-grid-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+/* ========== Card Layouts ========== */
+/* Feature box for modes, features, or categorized content */
+.msg-feature-box {
+    background: #FAFAFA;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 5px;
+}
+
+.msg-feature-box h4 {
+    margin: 0 0 15px 0;
+    font-size: 17pt;
+    font-weight: 700;
+    color: var(--msg-red);
+    border-bottom: 2px solid var(--msg-red);
+    padding-bottom: 8px;
+}
+
+.msg-feature-box ul {
+    margin: 0 0 15px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+    font-size: 14pt;
+}
+
+.msg-feature-box .use-case {
+    font-size: 14pt;
+    font-style: italic;
+    color: var(--msg-dark-gray);
+    margin-top: 10px;
+}
+
+/* Standard card with top border accent */
+.msg-card {
+    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+    border: 2px solid #E0E0E0;
+    border-top: 5px solid var(--msg-red);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.msg-card h4 {
+    margin: 0 0 12px 0;
+    font-size: 17pt;
+    font-weight: 700;
+    color: var(--msg-red);
+    text-align: center;
+}
+
+.msg-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14pt;
+    line-height: 1.5;
+}
+
+.msg-card li {
+    margin: 6px 0;
+}
+
+/* ========== Hero & Badge Components ========== */
+.msg-section-container {
+    margin-top: 30px;
+}
+
+.msg-section-intro {
+    text-align: center;
+    font-size: 15pt;
+    color: var(--msg-dark-gray);
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.msg-hero-card {
+    background: #FFFFFF;
+    border: 3px solid var(--msg-red);
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+}
+
+.msg-hero-card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    height: 8px;
+    background: var(--msg-red);
+    border-radius: 12px 12px 0 0;
+}
+
+.msg-badge-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: var(--msg-red);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22pt;
+    font-weight: 700;
+}
+
+.msg-hero-card h4 {
+    margin: 0 60px 15px 0;
+    font-size: 19pt;
+    font-weight: 700;
+    color: var(--msg-red);
+    line-height: 1.3;
+}
+
+.msg-hero-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14pt;
+    line-height: 1.6;
+}
+
+.msg-hero-card li {
+    margin: 8px 0;
+}
+
+.msg-supporting-card {
+    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+    border: 2px solid #E0E0E0;
+    border-left: 5px solid var(--msg-red);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.msg-supporting-card h4 {
+    margin: 0 0 12px 0;
+    font-size: 17pt;
+    font-weight: 700;
+    color: var(--msg-red);
+}
+
+.msg-supporting-card ul {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14pt;
+    line-height: 1.5;
+}
+
+.msg-supporting-card li {
+    margin: 6px 0;
+}
+
+/* ========== Contact Layout ========== */
+section.msg-contact-layout {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: white;
+}
+
+section.msg-contact-layout h1 {
+    position: relative;
+    z-index: 5;
+}
+
+.msg-contact-left {
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    z-index: 5;
+}
+
+.msg-contact-person {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.msg-contact-person img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.msg-contact-info {
+    flex: 1;
+}
+
+.msg-contact-info .name {
+    font-size: 18pt;
+    font-weight: 700;
+    color: var(--msg-dark-gray);
+    margin: 0 0 6px 0;
+}
+
+.msg-contact-info .role {
+    font-size: 15pt;
+    color: var(--msg-dark-gray);
+    margin: 0 0 8px 0;
+}
+
+.msg-contact-info .email {
+    font-size: 15pt;
+    color: var(--msg-red);
+    text-decoration: underline;
+}
+
+.msg-company-info {
+    position: absolute;
+    bottom: 80px;
+    right: 60px;
+    background: white;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 25px;
+    font-size: 13pt;
+    line-height: 1.8;
+    width: 350px;
+    z-index: 10;
+}
+
+.msg-company-info strong {
+    display: block;
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--msg-dark-gray);
+    margin-bottom: 12px;
+}
+
+.msg-company-info a {
+    color: var(--msg-red);
+    text-decoration: none;
+}
+
+section.msg-contact-layout img[alt~="contact-bg"],
+section.msg-contact-layout p img[alt~="contact-bg"] {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 40% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    z-index: 1 !important;
+    border-radius: 0 !important;
+    flex-shrink: initial !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
