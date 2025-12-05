@@ -11,7 +11,7 @@ paginate: true
 
 # Marp Theme msg
 
-## Jan Tuttas
+## Jan Tuttas & Moritz Rohde
 
 ![title h:720](themes/assets/title-msg.png)
 

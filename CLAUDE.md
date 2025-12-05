@@ -24,6 +24,9 @@ Use Marp CLI or the VSCode extension to export presentations:
 ### Testing Changes
 Open [Folienmaster.md](Folienmaster.md) in VSCode with the Marp extension to test theme changes. This file contains examples of all slide types.
 
+### Importing from PowerPoint (PPTX)
+See [.claude/pptx-import-guide.md](.claude/pptx-import-guide.md) for detailed instructions on converting PPTX files to MARP presentations, including how to extract text content and images from the source file.
+
 ## Architecture
 
 ### Theme System
@@ -38,6 +41,7 @@ The theme supports multiple slide types activated via Marp's `<!-- _class: type 
 - **Standard slide**: Default layout with header, footer, pagination
 - **Title slide** (`_class: title`): Landing page with large title, subtitle, and decorative circle
 - **Chapter slide** (`_class: chapter`): Section divider with background image
+  - **IMPORTANT**: The background image can crop long subtitles. If the `##` subtitle is longer than ~25 characters, use `<br>` to add a line break (e.g., `## Long subtitle text<br>continues here`)
 - **Agenda slide** (`_class: agenda`): Numbered list with custom counter styling
 - **End slide** (`_class: end`): Closing slide similar to title slide
 - **Timeline slide** (`_class: timeline`): Horizontal timeline with alternating events
@@ -208,6 +212,81 @@ Fax
 
 ## Best Practices
 
+### Presentation Structure (REQUIRED)
+
+Every presentation created with this theme MUST:
+
+1. **Use the msg theme**: Always set `theme: msg` in the frontmatter and reference [themes/msg.css](themes/msg.css)
+2. **Start with a Title slide**: First slide must use `<!-- _class: title -->` with background image
+3. **Include an Agenda slide**: Second slide must use `<!-- _class: agenda -->` with numbered topics
+4. **End with a Contact slide**: Last slide must use `<!-- _class: msg-contact-layout -->` with contact information
+
+**Required Presentation Template:**
+```markdown
+---
+marp: true
+theme: msg
+header: Presentation Title
+footer: © msg group | Presentation Title | 2025
+paginate: true
+---
+
+<!-- _class: title -->
+
+# Presentation Title
+## Subtitle
+
+![title h:720](themes/assets/title-msg.png)
+
+---
+
+<!-- _class: agenda -->
+
+# Agenda
+
+1. First Topic
+2. Second Topic
+3. Third Topic
+
+---
+
+[... content slides ...]
+
+---
+
+<!-- _class: msg-contact-layout -->
+
+# Contact
+
+<div class="msg-contact-left">
+
+<div class="msg-contact-person">
+<img src="path/to/photo.jpg" alt="Name">
+<div class="msg-contact-info">
+<div class="name">Contact Name</div>
+<div class="role">Role/Position</div>
+<div class="email">email@msg.group</div>
+</div>
+</div>
+
+</div>
+
+![contact-bg h:720](themes/assets/contact-msg.png)
+
+<div class="msg-company-info">
+
+**msg systems ag**
+
+Robert-Bürkle-Straße 1
+85737 Ismaning
+
++49 89 96101-0
+
+[info@msg.group](mailto:info@msg.group)
+
+</div>
+```
+
 ### When to Use Custom CSS vs Layout Components
 
 **Use Layout Components (Preferred):**
@@ -236,6 +315,70 @@ When creating new reusable components:
 4. Add to the appropriate section in msg.css with clear comments
 5. Document in CLAUDE.md with usage examples
 6. Test with [Folienmaster.md](Folienmaster.md) or create an example slide
+
+## Presentation File Organization
+
+### Folder Structure
+Each presentation should be in its own folder under `presentations/`:
+```
+presentations/
+├── marp-for-business/
+│   ├── MARP for Business.md
+│   └── moritz.jpg              # Contact photo
+├── claude-vw/
+│   ├── ClaudeCode VW.md
+│   └── contact.jpg
+└── ikos-poznan/
+    ├── IKoS-Poznan.md
+    └── moritz.jpg
+```
+
+### Asset References from Presentation Folders
+When presentations are in `presentations/<name>/`, use relative paths to theme assets:
+```markdown
+![title h:720](../../themes/assets/title-msg.png)
+![chapter h:720](../../themes/assets/chapter-msg.png)
+![contact-bg h:720](../../themes/assets/contact-msg.png)
+```
+
+For local assets (contact photos), use relative paths within the folder:
+```markdown
+<img src="./moritz.jpg" alt="Name">
+```
+
+### Content Patterns by Audience
+
+**For Non-Technical Audiences (Business, Sales):**
+- Use simple language, avoid jargon
+- Focus on benefits, not technical details
+- Use `.msg-hero-card` with numbered badges for key takeaways
+- Keep bullet points short (3-4 words each)
+- Use chapter slides to create clear sections
+
+**For Technical Audiences:**
+- Can include more detail and terminology
+- Use `.msg-feature-box` with `.use-case` labels for categorization
+- Tables work well for comparisons
+- Code examples can be included in standard slides
+
+### Example: Feature Box with Use-Case Pattern
+```markdown
+<div class="multicolumn">
+
+<div class="msg-feature-box">
+
+#### Feature Name
+
+- Benefit one
+- Benefit two
+- Benefit three
+
+<div class="use-case">→ When to use this</div>
+
+</div>
+
+</div>
+```
 
 ## Key Constraints
 

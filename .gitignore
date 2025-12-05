@@ -1,5 +1,6 @@
 # Presentations folder - contains project-specific presentations
 presentations/
 
-.DS_Store
+reference/
+
 themes/.DS_Store
