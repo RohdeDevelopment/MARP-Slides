@@ -38,13 +38,30 @@ The theme is implemented in a single CSS file [themes/msg.css](themes/msg.css) t
 
 ### Slide Types
 The theme supports multiple slide types activated via Marp's `<!-- _class: type -->` directive:
+
+**Basic Slides:**
 - **Standard slide**: Default layout with header, footer, pagination
 - **Title slide** (`_class: title`): Landing page with large title, subtitle, and decorative circle
 - **Chapter slide** (`_class: chapter`): Section divider with background image
   - **IMPORTANT**: The background image can crop long subtitles. If the `##` subtitle is longer than ~25 characters, use `<br>` to add a line break (e.g., `## Long subtitle text<br>continues here`)
+- **Chapter numbered** (`_class: chapter-numbered`): Chapter slide with red circle containing chapter number (01, 02, etc.)
+  - Number displayed in small red circle with white text above the title
+  - Title and subtitle have max-width of 400px to prevent overlap with background image
 - **Agenda slide** (`_class: agenda`): Numbered list with custom counter styling
+  - Use `**bold**` to highlight the current agenda item in red
 - **End slide** (`_class: end`): Closing slide similar to title slide
-- **Timeline slide** (`_class: timeline`): Horizontal timeline with alternating events
+
+**Quote & Keymessage:**
+- **Quote slide** (`_class: quote`): Centered italic text for quotes or key messages
+  - Use `**bold**` to highlight key words in red
+  - Add author/source as `## Author Name` below the quote
+
+**Process & Data:**
+- **Steps slide** (`_class: steps`): Horizontal numbered process steps (5-6 items)
+- **Cycle slide** (`_class: cycle`): 4-quadrant layout for PDCA or similar cycles
+  - Use `.msg-cycle-container` with `.msg-cycle-item` elements
+- **Timeline slide** (`_class: timeline`): Horizontal timeline with 3 alternating events
+- **Timeline extended** (`_class: timeline-extended`): Extended timeline for 6-8 events
 
 ### Layout Components
 
@@ -87,19 +104,69 @@ The theme now includes reusable layout components that can be used in any presen
 - First column bold and colored in msg-red
 - Alternating row colors for readability
 
+**Statistics & Labels:**
+- `.msg-stat-card`: Card for displaying statistics/metrics with `.stat-number` and `.stat-label`
+- `.msg-label`: Inline label/tag component with color variants (`.petrol`, `.yellow`, `.green`, `.purple`, `.pink`, `.gray`)
+
+**Flow Layout:**
+- `.msg-flow`: Container for start-to-end process flows
+- `.msg-flow-start`, `.msg-flow-end`: Start and end point boxes
+- `.msg-flow-arrow`: Arrow element between points
+
+**Multi-Person Contact:**
+- `.msg-contact-grid`: Grid layout for 4+ contact persons on one slide
+
 ### Brand Colors
 Colors are defined as CSS custom properties (line 12-24 in msg.css):
 - `--msg-red`: #A01441 (primary brand color)
 - `--msg-dark-gray`: #6F6F6F
 - `--msg-gray`: #ACACAC
-- `--msg-petrol`, `--msg-yellow`, `--msg-green`, `--msg-purple`, `--msg-pink`: Additional accent colors
+- `--msg-petrol`: #139EAD
+- `--msg-yellow`: #F5B510
+- `--msg-green`: #70DC51
+- `--msg-purple`: #5866E3
+- `--msg-pink`: #D74B97
+
+### Brand Guidelines (from Corporate Design)
+
+**Typography:**
+- **Primary font**: Open Sans (MARP) / Aptos (PowerPoint)
+- **Headings**: Bold (700) for emphasis
+- **Body text**: Light (300) or Regular (400)
+- **Accent text**: First or second line of a headline can be set in red bold for emphasis
+
+**Design Principles:**
+- Use msg-red (#A01441) as primary accent color
+- Maintain consistent spacing and padding
+- 16:9 aspect ratio (1280x720px)
+- Logo placement: top-right corner
 
 ### Asset Management
 Images are stored in [themes/assets/](themes/assets/) and referenced in Markdown:
-- `title-msg.png`: Background for title/end slides
-- `chapter-msg.png`: Background for chapter slides
-- `chapter-automotive.png`, `title-automotive.png`: Alternative backgrounds
+
+**Main Theme Assets:**
+- `title-msg.png`: Background for title/end slides (standard msg)
+- `title-automotive.png`: Background for automotive-themed title slides
+- `chapter-msg.png`: Background for chapter slides (standard msg)
+- `chapter-automotive.png`: Background for automotive-themed chapter slides
+- `contact-msg.png`: Background for contact slide right side
 - SVG logos are embedded as base64 in CSS to eliminate external dependencies
+
+**Folienmaster Reference Images:**
+The `themes/assets/folienmaster-reference/` folder contains extracted images from the corporate PPTX template:
+
+| Image Range | Type | Description |
+|-------------|------|-------------|
+| `image1-12` | Decorative | Title/chapter backgrounds, logos, decorative elements |
+| `image13-14, 20-24` | Backgrounds | Automotive theme backgrounds (high-quality photos) |
+| `image25-30` | Backgrounds | Modern design backgrounds with gradients |
+| `image31-42` | Content | Diagrams, illustrations, content images |
+| `image43-87` | Icons | SVG icons and small graphics |
+
+**Recommended Image Usage:**
+- `image13.jpg` (1920x1080): Automotive title background
+- `image30.png` (1280x720): Gradient background for custom slides
+- `image25-28.png`: Modern design backgrounds with transparency
 
 ## Usage Pattern
 
@@ -206,6 +273,114 @@ Phone
 Fax
 
 [email@msg.group](mailto:email@msg.group)
+
+</div>
+```
+
+**Example: Quote/Keymessage Slide**
+```markdown
+<!-- _class: quote -->
+
+# Zitat oder **Keymessage** einfügen
+
+## Dr. Jürgen Zehetmaier, Vorsitzender msg
+```
+
+**Example: Steps/Process Slide**
+```markdown
+<!-- _class: steps -->
+
+# Prozessschritte
+
+1. **Erste Textbox**
+Beschreibung
+2. **Zweite Textbox**
+Beschreibung
+3. **Dritte Textbox**
+Beschreibung
+```
+
+**Example: PDCA Cycle Slide**
+```markdown
+<!-- _class: cycle -->
+
+# PDCA Zyklus
+
+<div class="msg-cycle-container">
+
+<div class="msg-cycle-item">
+
+#### Plan
+
+Beschreibung
+
+</div>
+
+<div class="msg-cycle-item">
+
+#### Do
+
+Beschreibung
+
+</div>
+
+<div class="msg-cycle-item">
+
+#### Check
+
+Beschreibung
+
+</div>
+
+<div class="msg-cycle-item">
+
+#### Act
+
+Beschreibung
+
+</div>
+
+</div>
+```
+
+**Example: Statistics Cards**
+```markdown
+<div class="msg-grid-3col">
+
+<div class="msg-stat-card">
+<div class="stat-number">29%</div>
+<div class="stat-label">Beispieltext</div>
+</div>
+
+<div class="msg-stat-card">
+<div class="stat-number">71%</div>
+<div class="stat-label">Beispieltext</div>
+</div>
+
+</div>
+```
+
+**Example: Flow Layout**
+```markdown
+<div class="msg-flow">
+
+<div class="msg-flow-start">
+
+#### Startpunkt
+
+Beschreibung
+
+</div>
+
+<div class="msg-flow-arrow">→</div>
+
+<div class="msg-flow-end">
+
+#### Endpunkt
+
+Beschreibung
+
+</div>
 
 </div>
 ```

@@ -67,14 +67,6 @@ h1 {
     font-weight: 700;
 }
 
-/* devider */
-h1::before {
-    position: absolute;
-    top: 66px;
-
-    content: url("data:image/png;base64,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");
-}
-
 /* footnote */
 section>div.footnote {
     position: absolute;
@@ -233,6 +225,19 @@ section.agenda>ol>li::before {
 
 section.agenda>header {
     opacity: 0;
+}
+
+/* Agenda highlight for current item */
+section.agenda ol li strong {
+    color: var(--msg-red);
+    font-weight: 700;
+}
+
+/* Highlighted agenda item: red circle with white number */
+section.agenda>ol>li:has(strong)::before {
+    background-color: var(--msg-red);
+    border-color: var(--msg-red);
+    color: white;
 }
 
 /* ################ Chapter ################ */
@@ -719,4 +724,410 @@ section.msg-contact-layout p img[alt~="contact-bg"] {
     flex-shrink: initial !important;
     margin: 0 !important;
     padding: 0 !important;
+}
+
+/* ========================================
+   NEW SLIDE TYPES FROM FOLIENMASTER
+   Based on m4a_Folienmaster_Präsentationsdesign_de.pptx
+   ======================================== */
+
+/* ========== Quote/Keymessage Slide ========== */
+/* Usage: <!-- _class: quote --> */
+section.quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 120px;
+}
+
+section.quote>h1 {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: 100%;
+    max-height: none;
+    font-size: 32pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--msg-black);
+    line-height: 1.4;
+    text-align: center;
+}
+
+section.quote>h1::before {
+    display: none;
+}
+
+section.quote>h1 strong {
+    color: var(--msg-red);
+    font-weight: 700;
+}
+
+section.quote>h2 {
+    position: relative;
+    margin-top: 40px;
+    font-size: 16pt;
+    font-weight: 400;
+    color: var(--msg-dark-gray);
+}
+
+section.quote>header {
+    opacity: 1;
+}
+
+/* ========== Steps Slide ========== */
+/* Usage: <!-- _class: steps --> */
+section.steps {
+    padding: 185px 33px 80px 65px;
+}
+
+section.steps>ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    counter-reset: steps-counter;
+    padding: 0;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+section.steps>ol>li {
+    counter-increment: steps-counter;
+    flex: 1 1 calc(20% - 15px);
+    min-width: 150px;
+    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 20px 15px;
+    text-align: center;
+    position: relative;
+}
+
+section.steps>ol>li::before {
+    content: counter(steps-counter, decimal-leading-zero);
+    display: block;
+    font-size: 28pt;
+    font-weight: 700;
+    color: var(--msg-red);
+    margin-bottom: 10px;
+}
+
+section.steps>ol>li strong {
+    display: block;
+    font-size: 14pt;
+    color: var(--msg-black);
+    margin-bottom: 5px;
+}
+
+/* ========== Cycle/PDCA Slide ========== */
+/* Usage: <!-- _class: cycle --> */
+section.cycle {
+    padding: 185px 33px 80px 65px;
+}
+
+section.cycle>.msg-cycle-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    height: calc(100% - 100px);
+}
+
+section.cycle .msg-cycle-item {
+    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+}
+
+section.cycle .msg-cycle-item h4 {
+    margin: 0 0 15px 0;
+    font-size: 20pt;
+    font-weight: 700;
+    color: var(--msg-red);
+}
+
+section.cycle .msg-cycle-item p {
+    margin: 0;
+    font-size: 14pt;
+    color: var(--msg-black);
+}
+
+/* ========== Statistics Cards ========== */
+.msg-stat-card {
+    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.msg-stat-card .stat-number {
+    font-size: 48pt;
+    font-weight: 700;
+    color: var(--msg-red);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.msg-stat-card .stat-label {
+    font-size: 14pt;
+    color: var(--msg-dark-gray);
+}
+
+/* ========== Label Component ========== */
+.msg-label {
+    display: inline-block;
+    background: var(--msg-red);
+    color: white;
+    font-size: 12pt;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.msg-label.petrol { background: var(--msg-petrol); }
+.msg-label.yellow { background: var(--msg-yellow); color: var(--msg-black); }
+.msg-label.green { background: var(--msg-green); color: var(--msg-black); }
+.msg-label.purple { background: var(--msg-purple); }
+.msg-label.pink { background: var(--msg-pink); }
+.msg-label.gray { background: var(--msg-gray); color: var(--msg-black); }
+
+/* ========== Flow Layout ========== */
+.msg-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.msg-flow-start,
+.msg-flow-end {
+    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 30px 40px;
+    text-align: center;
+    min-width: 250px;
+}
+
+.msg-flow-start h4,
+.msg-flow-end h4 {
+    margin: 0 0 10px 0;
+    font-size: 18pt;
+    font-weight: 700;
+    color: var(--msg-red);
+}
+
+.msg-flow-start p,
+.msg-flow-end p {
+    margin: 0;
+    font-size: 14pt;
+    color: var(--msg-dark-gray);
+}
+
+.msg-flow-arrow {
+    font-size: 48pt;
+    color: var(--msg-red);
+}
+
+/* ========== Extended Timeline (6-8 entries) ========== */
+section.timeline-extended>ul {
+    list-style-type: none;
+    position: relative;
+    padding: 0;
+    margin-top: 80px;
+}
+
+section.timeline-extended>ul::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2pt;
+    background: var(--msg-red);
+}
+
+section.timeline-extended>ul li {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: var(--msg-red);
+    border-radius: 50%;
+    margin: -2px 55px;
+    border: 2px solid var(--msg-white);
+}
+
+section.timeline-extended>ul li::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 70px;
+    background: var(--msg-dark-gray);
+}
+
+section.timeline-extended>ul li:nth-child(odd)::before {
+    top: -70px;
+    left: 50%;
+}
+
+section.timeline-extended>ul li:nth-child(even)::before {
+    bottom: -70px;
+    left: 50%;
+}
+
+section.timeline-extended>ul li:nth-child(odd) span {
+    position: absolute;
+    top: -70px;
+    left: 15px;
+    white-space: nowrap;
+    color: var(--msg-black);
+    font-size: 12pt;
+}
+
+section.timeline-extended>ul li:nth-child(even) span {
+    position: absolute;
+    bottom: -70px;
+    left: 15px;
+    white-space: nowrap;
+    color: var(--msg-black);
+    font-size: 12pt;
+}
+
+/* ========== Chapter with Number ========== */
+/* Usage: <!-- _class: chapter-numbered --> */
+section.chapter-numbered {
+    position: relative;
+}
+
+img[alt~="chapter-numbered"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 780px;
+}
+
+section.chapter-numbered::before {
+    position: absolute;
+    right: 39px;
+    top: 32px;
+    width: 121px;
+    z-index: 2;
+    content: url("data:image/svg+xml;base64,PHN2ZyBpZD0iRWJlbmVfMSIgZGF0YS1uYW1lPSJFYmVuZSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNjIuNTQ4MzgiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHdoaXRlOwogICAgICB9CgogICAgICAuY2xzLTIsIC5jbHMtMyB7CiAgICAgICAgZmlsbDogd2hpdGU7CiAgICAgIH0KCiAgICAgIC5jbHMtMyB7CiAgICAgICAgZmlsbC1ydWxlOiBldmVub2RkOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8dGl0bGU+MjAyMDAyMTlfTG9nbzwvdGl0bGU+CiAgPGc+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wLDM3Ljc1MjY5QTEwLjQxOTM1LDEwLjQxOTM1LDAsMSwxLDEwLjQzMDEsNDguMTYxMjloLS4wMjE0OUExMC40MTkzNCwxMC40MTkzNCwwLDAsMSwwLDM3Ljc1MjY5WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjcuNTM3NjQsMFY0Ny44NjAyMWg4LjczMTE5VjcuMjc5NTdINTYuMjc5NThWNDcuODYwMjFoOC43NTI2OVY3LjI3OTU3SDc4LjM0NDA5QzgyLjgyOCw3LjI3OTU3LDg2LDkuOTc4NDksODYsMTUuODgxNzJWNDcuOTE0aDguNzQxOTRWMTMuNTA1MzdjMC02LjUxNjEyLTMuMzU0ODMtMTMuNDA4Ni0xMi0xMy40MDg2WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTEyLjIzNjU3LDBjLTkuNDMwMTEsMC0xMi4yOTAzMiw2LjI2ODgyLTEyLjI5MDMyLDEzLjI3OTU3LDAsNy41MjY4OCwzLjExODI4LDEzLjgwNjQ1LDExLjY4ODE3LDEzLjgwNjQ1aDIwLjc4NDk1YzYuMzY1NTksMCw2LjM2NTU5LDQuOTAzMjMsNi4zNjU1OSw3LjEyOXMwLDYuMzQ0MDktNi4yMDQzMSw2LjM0NDA5aC0zMS44MTcydjcuMzAxMDhoMzUuNDgzODdjOC44NDk0NiwwLDExLjM3NjM1LTUuMjA0MzEsMTEuMzc2MzUtMTMuNTgwNjUsMC05Ljk4OTI0LTMuMjI1ODEtMTQuNDczMTEtMTAuODE3Mi0xNC40NzMxMUgxMTQuMzU0ODVjLTUuNjY2NjcsMC01LjY2NjY3LTMuODE3MjEtNS42NjY2Ny02LjM3NjM1LDAtMS45ODkyNC41NTkxNC02LjE1MDU0LDYuNjM0NC02LjE1MDU0aDMwLjY2NjY3VjBaIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xOTEuMzAxMDgsNDAuNTY5ODlIMTczLjAyMTUxYy01LjM3NjM0LDAtMTAuOTAzMjIuNDA4Ni0xMS4wNDMtNi42MTI5VjE1LjA0M2MuMzAxMDctNS44ODE3MiwyLjQ3MzEyLTcuOTY3NzQsMTEuNDMwMTEtNy43NTI2OWgxNy45NDYyNFY0MC42MjM2NVpNMTcwLjMxMTgzLDBjLTcuNzg0OTUsMC0xMC42ODgxOCwxLjI0NzMyLTEyLjgxNzIsMi45NDYyMy0yLjMzMzM0LDEuODYwMjItNC40NzMxMyw0LjIxNTA2LTQuNTE2MTMsMTIuMjQ3MzJWMzIuNDYyMzZjMCw4LjUwNTM3LDIuMzY1NTksMTAuODgxNzIsNC43NzQyLDEyLjkwMzIyLDEuNjIzNjUsMS4xNjEzLDQuMzAxMDcsMi40ODM4NywxMi41ODA2NCwyLjQ4Mzg3aDIwLjk1N3YxLjg0OTQ3YzAsMy42MTI5LS42OTg5Miw1LjE4Mjc5LTQuODM4NzEsNS4xODI3OUgxNTkuMTM5Nzl2Ny42NjY2N2gzMC4xMDc1MmM4LjExODI4LDAsMTAuNzUyNjktMy42MTI5LDEwLjc1MjY5LTEwLjQ0MDg2VjBaIi8+CiAgPC9nPgo8L3N2Zz4K");
+}
+
+section.chapter-numbered>h1::before {
+    position: absolute;
+    left: 434px;
+    top: -15px;
+    width: 121px;
+    height: 38px;
+    z-index: 10;
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDUiIGhlaWdodD0iNTE1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHBhdGggZD0iTSAwLDAKICAgICAgICAgICAgIEwgMjUsMAogICAgICAgICAgICAgUSA0NSwwIDQ1ICwyMAogICAgICAgICAgICAgTCA0NSw1MTUKICAgICAgICAgICAgIEwgMCw1MTUKICAgICAgICAgICAgIFoiCiAgICAgICAgICBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+");
+}
+
+section.chapter-numbered>h1 {
+    position: absolute;
+    top: 220px;
+    left: 65px;
+    max-height: 110px;
+    max-width: 400px;
+    padding: 0;
+    color: var(--msg-red);
+    font-size: 36pt;
+    font-weight: 700;
+}
+
+section.chapter-numbered>h2 {
+    position: absolute;
+    top: 340px;
+    left: 65px;
+    max-width: 400px;
+    color: var(--msg-black);
+    font-size: 20pt;
+    font-weight: 700;
+}
+
+section.chapter-numbered>header {
+    opacity: 0;
+}
+
+section.chapter-numbered .chapter-number {
+    position: absolute;
+    top: 160px;
+    left: 65px;
+    width: 50px;
+    height: 50px;
+    font-size: 18pt;
+    font-weight: 700;
+    color: white;
+    background-color: var(--msg-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========== Content with Image Layouts ========== */
+.msg-content-with-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.msg-content-with-image.image-left {
+    grid-template-columns: 1fr 1fr;
+}
+
+.msg-content-with-image.image-right {
+    grid-template-columns: 1fr 1fr;
+}
+
+.msg-content-with-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ========== Multi-Person Contact ========== */
+.msg-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.msg-contact-grid .msg-contact-person {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.msg-contact-grid .msg-contact-person img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.msg-contact-grid .msg-contact-info .name {
+    font-size: 14pt;
+}
+
+.msg-contact-grid .msg-contact-info .role {
+    font-size: 12pt;
+}
+
+.msg-contact-grid .msg-contact-info .email {
+    font-size: 11pt;
 }
