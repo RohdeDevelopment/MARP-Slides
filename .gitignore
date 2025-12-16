@@ -4,3 +4,6 @@ presentations/
 reference/
 
 themes/.DS_Store
+
+# PII data
+.claude/contacts.md
