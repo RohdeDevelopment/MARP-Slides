@@ -55,9 +55,19 @@ The theme supports multiple slide types activated via Marp's `<!-- _class: type 
 - **Quote slide** (`_class: quote`): Centered italic text for quotes or key messages
   - Use `**bold**` to highlight key words in red
   - Add author/source as `## Author Name` below the quote
+- **Quote image slide** (`_class: quote-image`): Quote with full background image and white box overlay
+  - White box has rounded corners (top-right and bottom-right)
+  - Use `![quote-bg](path)` for background image
+  - Use `.quote-box` div with `#### Quote text` and paragraph for author
 
 **Process & Data:**
-- **Steps slide** (`_class: steps`): Horizontal numbered process steps (5-6 items)
+- **Steps slide** (`_class: steps`): Horizontal chevron-shaped process steps
+  - Each step is a chevron arrow shape with black border
+  - Use numbered list with `**01**`, `**02**`, etc. for the chevron content
+  - Use `**_04_**` (bold + italic) to highlight the active/current step with gradient fill
+  - Add `<span class="step-arrow">▼</span>` for down arrow indicator
+  - Add `<span class="step-label">Label</span>` for text below arrow
+  - Use `step-arrow-active` and `step-label-active` classes for highlighted step
 - **Cycle slide** (`_class: cycle`): 4-quadrant layout for PDCA or similar cycles
   - Use `.msg-cycle-container` with `.msg-cycle-item` elements
 - **Timeline slide** (`_class: timeline`): Horizontal timeline with 3 alternating events
@@ -286,18 +296,42 @@ Fax
 ## Dr. Jürgen Zehetmaier, Vorsitzender msg
 ```
 
-**Example: Steps/Process Slide**
+**Example: Quote with Background Image**
+```markdown
+<!-- _class: quote-image -->
+
+![quote-bg](themes/assets/folienmaster-reference/image28.png)
+
+<div class="quote-box">
+
+#### Zitat oder **Keymessage** einfügen
+
+Optionaler Subtitle
+
+</div>
+```
+
+**Example: Steps/Process Slide (Chevron Style)**
 ```markdown
 <!-- _class: steps -->
 
-# Prozessschritte
+# Headline with **bold keywords** possible
 
-1. **Erste Textbox**
-Beschreibung
-2. **Zweite Textbox**
-Beschreibung
-3. **Dritte Textbox**
-Beschreibung
+1. **01**
+<span class="step-arrow">▼</span>
+<span class="step-label">First Step</span>
+2. **02**
+<span class="step-arrow">▼</span>
+<span class="step-label">Second Step</span>
+3. **03**
+<span class="step-arrow">▼</span>
+<span class="step-label">Third Step</span>
+4. **_04_**
+<span class="step-arrow-active">▼</span>
+<span class="step-label-active">Active Step</span>
+5. **05**
+<span class="step-arrow">▼</span>
+<span class="step-label">Fifth Step</span>
 ```
 
 **Example: PDCA Cycle Slide**
