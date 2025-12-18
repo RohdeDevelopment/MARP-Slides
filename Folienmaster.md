@@ -111,19 +111,35 @@ Rechter Textplatzhalter
 
 ---
 
-# Text mit Bild
+<!-- _class: image-left -->
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+![image-left](themes/assets/folienmaster-reference/image24.jpeg)
 
-<div class="multicolumn">
+## Optionaler Subtitle
+
+# Ich bin eine Headline, in der Begriffe<br>**fett geschrieben** werden können.
 
 Textplatzhalter mit Fließtext
 - Zweite Textebene
-- Dritte Textebene
+  - Dritte Textebene
+    - Vierte Textebene
+      - Fünfte Textebene
 
-![width:350px](https://picsum.photos/720?image=29)
+---
 
-</div>
+<!-- _class: image-right -->
+
+![image-right](themes/assets/folienmaster-reference/image26.png)
+
+## Optionaler Subtitle
+
+# Ich bin eine Headline, in der Begriffe<br>**fett geschrieben** werden können.
+
+Textplatzhalter mit Fließtext
+- Zweite Textebene
+  - Dritte Textebene
+    - Vierte Textebene
+      - Fünfte Textebene
 
 ---
 
@@ -331,6 +347,18 @@ Labels können für Kategorien oder Tags verwendet werden:
 
 ---
 
+<!-- _class: quote-image -->
+
+![quote-bg](themes/assets/folienmaster-reference/image28.png)
+
+<div class="quote-box">
+
+#### Zitat oder **Keymessage** einfügen
+
+</div>
+
+---
+
 <!-- _class: chapter -->
 
 # Statistik & Prozess
@@ -368,18 +396,23 @@ Für Kennzahlen und Metriken
 
 <!-- _class: steps -->
 
-# Prozessschritte
+# Ich bin eine Headline, in welcher manche wichtigen Begriffe auch **fett geschrieben** werden können.
 
-1. **Erste Textbox**
-Beschreibung
-2. **Zweite Textbox**
-Beschreibung
-3. **Dritte Textbox**
-Beschreibung
-4. **Vierte Textbox**
-Beschreibung
-5. **Fünfte Textbox**
-Beschreibung
+1. **01**
+<span class="step-arrow">▼</span>
+<span class="step-label">Erste Textbox</span>
+2. **02**
+<span class="step-arrow">▼</span>
+<span class="step-label">Zweite Textbox</span>
+3. **03**
+<span class="step-arrow">▼</span>
+<span class="step-label">Dritte Textbox</span>
+4. **_04_**
+<span class="step-arrow-active">▼</span>
+<span class="step-label-active">Vierte Textbox</span>
+5. **05**
+<span class="step-arrow">▼</span>
+<span class="step-label">Fünfte Textbox</span>
 
 ---
 

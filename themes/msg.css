@@ -466,6 +466,125 @@ section tbody td:first-child {
     margin-top: 20px;
 }
 
+/* ========== Image Left Layout ========== */
+section.image-left {
+    padding: 185px 60px 80px 490px;
+}
+
+section.image-left > p:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+img[alt~="image-left"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 720px;
+    width: 450px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+section.image-left > h2 {
+    position: absolute;
+    top: 30px;
+    left: 490px;
+    right: 60px;
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--msg-dark-gray);
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E0E0E0;
+    max-width: none;
+    max-height: none;
+}
+
+section.image-left > h1 {
+    position: absolute;
+    top: 75px;
+    left: 490px;
+    right: 60px;
+    font-size: 24pt;
+    font-weight: 400;
+    color: var(--msg-black);
+    margin: 0;
+    max-width: none;
+    max-height: none;
+}
+
+section.image-left > h1 strong {
+    font-weight: 700;
+}
+
+section.image-left > header {
+    display: none;
+}
+
+/* ========== Image Right Layout ========== */
+section.image-right {
+    padding: 210px 680px 80px 60px;
+}
+
+section.image-right > p:first-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+img[alt~="image-right"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 720px;
+    width: 640px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+section.image-right > h2 {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    right: 680px;
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--msg-dark-gray);
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E0E0E0;
+    max-width: none;
+    max-height: none;
+}
+
+section.image-right > h1 {
+    position: absolute;
+    top: 65px;
+    left: 60px;
+    right: 680px;
+    font-size: 24pt;
+    font-weight: 400;
+    color: var(--msg-black);
+    margin: 0;
+    max-width: none;
+    max-height: none;
+    line-height: 1.3;
+}
+
+section.image-right > h1 strong {
+    font-weight: 700;
+}
+
+section.image-right > header {
+    display: none;
+}
+
 /* ========== Card Layouts ========== */
 /* Feature box for modes, features, or categorized content */
 .msg-feature-box {
@@ -777,49 +896,217 @@ section.quote>header {
     opacity: 1;
 }
 
+/* ========== Quote Image Slide ========== */
+/* Usage: <!-- _class: quote-image --> */
+/* Quote with fullscreen background image and white box with rounded corners */
+section.quote-image {
+    display: block;
+    padding: 0;
+}
+
+section.quote-image img[alt="quote-bg"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+
+section.quote-image>p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section.quote-image>.quote-box {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    width: 480px;
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 0 40px 0 40px;
+    padding: 40px 50px 30px 50px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.quote-image>.quote-box>h4 {
+    font-size: 24pt;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--msg-black);
+    line-height: 1.4;
+    margin: 0 0 30px 0;
+}
+
+section.quote-image>.quote-box>h4 strong {
+    color: var(--msg-red);
+    font-weight: 700;
+}
+
+section.quote-image>.quote-box>p {
+    font-size: 14pt;
+    font-weight: 400;
+    color: var(--msg-dark-gray);
+    margin: 0;
+}
+
+/* White msg logo for quote-image */
+section.quote-image::before {
+    position: absolute;
+    right: 39px;
+    top: 32px;
+    width: 121px;
+    z-index: 2;
+
+    content: url("data:image/svg+xml;base64,PHN2ZyBpZD0iRWJlbmVfMSIgZGF0YS1uYW1lPSJFYmVuZSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgNjIuNTQ4MzgiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHdoaXRlOwogICAgICB9CgogICAgICAuY2xzLTIsIC5jbHMtMyB7CiAgICAgICAgZmlsbDogd2hpdGU7CiAgICAgIH0KCiAgICAgIC5jbHMtMyB7CiAgICAgICAgZmlsbC1ydWxlOiBldmVub2RkOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8dGl0bGU+MjAyMDAyMTlfTG9nbzwvdGl0bGU+CiAgPGc+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0wLDM3Ljc1MjY5QTEwLjQxOTM1LDEwLjQxOTM1LDAsMSwxLDEwLjQzMDEsNDguMTYxMjloLS4wMjE0OUExMC40MTkzNCwxMC40MTkzNCwwLDAsMSwwLDM3Ljc1MjY5WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjcuNTM3NjQsMFY0Ny44NjAyMWg4LjczMTE5VjcuMjc5NTdINTYuMjc5NThWNDcuODYwMjFoOC43NTI2OVY3LjI3OTU3SDc4LjM0NDA5QzgyLjgyOCw3LjI3OTU3LDg2LDkuOTc4NDksODYsMTUuODgxNzJWNDcuOTE0aDguNzQxOTRWMTMuNTA1MzdjMC02LjUxNjEyLTMuMzU0ODMtMTMuNDA4Ni0xMi0xMy40MDg2WiIvPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTEyLjIzNjU3LDBjLTkuNDMwMTEsMC0xMi4yOTAzMiw2LjI2ODgyLTEyLjI5MDMyLDEzLjI3OTU3LDAsNy41MjY4OCwzLjExODI4LDEzLjgwNjQ1LDExLjY4ODE3LDEzLjgwNjQ1aDIwLjc4NDk1YzYuMzY1NTksMCw2LjM2NTU5LDQuOTAzMjMsNi4zNjU1OSw3LjEyOXMwLDYuMzQ0MDktNi4yMDQzMSw2LjM0NDA5aC0zMS44MTcydjcuMzAxMDhoMzUuNDgzODdjOC44NDk0NiwwLDExLjM3NjM1LTUuMjA0MzEsMTEuMzc2MzUtMTMuNTgwNjUsMC05Ljk4OTI0LTMuMjI1ODEtMTQuNDczMTEtMTAuODE3Mi0xNC40NzMxMUgxMTQuMzU0ODVjLTUuNjY2NjcsMC01LjY2NjY3LTMuODE3MjEtNS42NjY2Ny02LjM3NjM1LDAtMS45ODkyNC41NTkxNC02LjE1MDU0LDYuNjM0NC02LjE1MDU0aDMwLjY2NjY3VjBaIi8+CiAgICA8cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xOTEuMzAxMDgsNDAuNTY5ODlIMTczLjAyMTUxYy01LjM3NjM0LDAtMTAuOTAzMjIuNDA4Ni0xMS4wNDMtNi42MTI5VjE1LjA0M2MuMzAxMDctNS44ODE3MiwyLjQ3MzEyLTcuOTY3NzQsMTEuNDMwMTEtNy43NTI2OWgxNy45NDYyNFY0MC42MjM2NVpNMTcwLjMxMTgzLDBjLTcuNzg0OTUsMC0xMC42ODgxOCwxLjI0NzMyLTEyLjgxNzIsMi45NDYyMy0yLjMzMzM0LDEuODYwMjItNC40NzMxMyw0LjIxNTA2LTQuNTE2MTMsMTIuMjQ3MzJWMzIuNDYyMzZjMCw4LjUwNTM3LDIuMzY1NTksMTAuODgxNzIsNC43NzQyLDEyLjkwMzIyLDEuNjIzNjUsMS4xNjEzLDQuMzAxMDcsMi40ODM4NywxMi41ODA2NCwyLjQ4Mzg3aDIwLjk1N3YxLjg0OTQ3YzAsMy42MTI5LS42OTg5Miw1LjE4Mjc5LTQuODM4NzEsNS4xODI3OUgxNTkuMTM5Nzl2Ny42NjY2N2gzMC4xMDc1MmM4LjExODI4LDAsMTAuNzUyNjktMy42MTI5LDEwLjc1MjY5LTEwLjQ0MDg2VjBaIi8+CiAgPC9nPgo8L3N2Zz4K");
+}
+
+/* White footer and pagination for quote-image */
+section.quote-image>footer {
+    color: white;
+    z-index: 2;
+}
+
+section.quote-image::after {
+    color: white;
+    z-index: 2;
+    left: auto;
+    right: 65px;
+}
+
+section.quote-image>header {
+    opacity: 0;
+}
+
 /* ========== Steps Slide ========== */
 /* Usage: <!-- _class: steps --> */
 section.steps {
     padding: 185px 33px 80px 65px;
 }
 
+section.steps>h2 {
+    position: absolute;
+    top: 90px;
+    left: 65px;
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--msg-dark-gray);
+    margin: 0;
+}
+
+section.steps>h1 {
+    font-size: 24pt;
+    font-weight: 400;
+    margin-bottom: 60px;
+}
+
+section.steps>h1 strong {
+    font-weight: 700;
+    color: var(--msg-black);
+}
+
 section.steps>ol {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     list-style: none;
     counter-reset: steps-counter;
     padding: 0;
-    margin-top: 20px;
-    gap: 15px;
+    margin: 0;
+    gap: 0;
+    position: relative;
 }
 
 section.steps>ol>li {
     counter-increment: steps-counter;
-    flex: 1 1 calc(20% - 15px);
-    min-width: 150px;
-    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
-    border: 2px solid #E0E0E0;
-    border-radius: 8px;
-    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     position: relative;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
-section.steps>ol>li::before {
-    content: counter(steps-counter, decimal-leading-zero);
-    display: block;
-    font-size: 28pt;
-    font-weight: 700;
-    color: var(--msg-red);
-    margin-bottom: 10px;
-}
-
-section.steps>ol>li strong {
-    display: block;
-    font-size: 14pt;
+/* Chevron shape - single unified arrow shape using clip-path */
+section.steps>ol>li>strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 10px);
+    height: 50px;
+    background: var(--msg-black);
     color: var(--msg-black);
-    margin-bottom: 5px;
+    font-size: 18pt;
+    font-weight: 700;
+    position: relative;
+    /* Arrow shape: left arrow >, right arrow > */
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%, 15px 50%);
+}
+
+/* White fill inside the chevron (creates black border effect) */
+section.steps>ol>li>strong::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: white;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%, 14px 50%);
+    z-index: -1;
+}
+
+/* Highlighted step - em just removes italic */
+section.steps>ol>li>strong>em {
+    font-style: normal;
+}
+
+/* Highlighted step - gradient fill instead of white */
+section.steps>ol>li:has(strong>em)>strong::before {
+    background: linear-gradient(90deg, var(--msg-petrol) 0%, var(--msg-green) 100%);
+}
+
+section.steps>ol>li:has(strong>em)>strong {
+    color: white;
+}
+
+/* Down arrow indicator below chevron */
+section.steps>ol>li>span.step-arrow {
+    font-size: 14pt;
+    color: var(--msg-gray);
+    margin-top: 15px;
+}
+
+/* Highlighted step arrow - msg red */
+section.steps>ol>li>span.step-arrow-active {
+    font-size: 14pt;
+    color: var(--msg-red);
+    margin-top: 15px;
+}
+
+/* Label below arrow - default (non-highlighted) */
+section.steps>ol>li>span.step-label {
+    font-size: 12pt;
+    color: var(--msg-dark-gray);
+    margin-top: 5px;
+}
+
+/* Highlighted step label - msg red */
+section.steps>ol>li>span.step-label-active {
+    font-size: 12pt;
+    color: var(--msg-red);
+    margin-top: 5px;
 }
 
 /* ========== Cycle/PDCA Slide ========== */
