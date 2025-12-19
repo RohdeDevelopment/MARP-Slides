@@ -95,7 +95,7 @@ section>div.footnote {
 section::after {
     position: absolute;
     bottom: 28px;
-    left: 65px;
+    right: 65px;
 
     content: attr(data-marpit-pagination);
     color: var(--msg-black);
