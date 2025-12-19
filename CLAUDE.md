@@ -72,6 +72,11 @@ The theme supports multiple slide types activated via Marp's `<!-- _class: type 
   - Use `.msg-cycle-path` container with `.msg-cycle-waypoint` elements
   - Rounded rectangular track with monochromatic red circle markers (40%, 60%, 80%, 100% opacity)
   - Directional arrows integrated into the path showing clockwise flow
+- **Doughnut Chart** (`_class: doughnut`): Ring chart with 3 sections
+  - First section: gradient highlight (teal→green→lime)
+  - Other sections: gray tones with different opacity
+  - Use `.msg-doughnut` container with `.msg-doughnut-label` elements
+  - Labels positioned around the ring with percentage + description
 - **Timeline slide** (`_class: timeline`): Horizontal timeline with 3 alternating events
 - **Timeline extended** (`_class: timeline-extended`): Extended timeline for 6-8 events
 
@@ -379,6 +384,41 @@ Ergebnisse prüfen und bewerten
 #### Act
 
 Anpassungen vornehmen
+
+</div>
+
+</div>
+```
+
+**Example: Doughnut Chart Slide**
+```markdown
+<!-- _class: doughnut -->
+
+# Headline with **bold keywords** possible
+
+<div class="msg-doughnut">
+
+<div class="msg-doughnut-label label-1">
+
+**30%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-2">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-3">
+
+**35%**
+
+Ich bin ein kleines Label
 
 </div>
 

@@ -1235,6 +1235,115 @@ section.cycle-flow .msg-cycle-waypoint:nth-child(4)::before {
     background: var(--msg-red);
 }
 
+/* ========== Doughnut Chart Slide ========== */
+/* Usage: <!-- _class: doughnut --> */
+/* Ring chart with 3 sections: gradient highlight + 2 gray sections */
+section.doughnut {
+    padding: 140px 33px 80px 65px;
+}
+
+section.doughnut .msg-doughnut {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    margin: 20px auto;
+    border-radius: 50%;
+    /* Conic gradient: segment1 (0-30%), gap, segment2 (30-65%), gap, segment3 (65-100%) */
+    /* 30% = 108deg, 35% = 126deg, 35% = 126deg */
+    background: conic-gradient(
+        from 0deg,
+        #1289A8 0deg,
+        #48D56C 54deg,
+        #BCEF28 108deg,
+        transparent 108deg 110deg,
+        rgba(172, 172, 172, 0.6) 110deg 234deg,
+        transparent 234deg 236deg,
+        rgba(172, 172, 172, 0.8) 236deg 360deg
+    );
+}
+
+section.doughnut .msg-doughnut::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 50%;
+}
+
+/* Variant B: Petrol, Yellow, Pink gradients */
+section.doughnut .msg-doughnut.gradients-b {
+    background: conic-gradient(
+        from 0deg,
+        #0D6E7A 0deg, #139EAD 54deg, #5ED4E6 108deg,
+        transparent 108deg 110deg,
+        #C48A0D 110deg, #F5B510 172deg, #FFD966 234deg,
+        transparent 234deg 236deg,
+        #A3357A 236deg, #D74B97 298deg, #F5A3D0 360deg
+    );
+}
+
+/* Variant C: Purple, Red, Green gradients */
+section.doughnut .msg-doughnut.gradients-c {
+    background: conic-gradient(
+        from 0deg,
+        #3A3F9E 0deg, #5866E3 54deg, #9BA3F5 108deg,
+        transparent 108deg 110deg,
+        #6B0F2B 110deg, #A01441 172deg, #D74B97 234deg,
+        transparent 234deg 236deg,
+        #139EAD 236deg, #70DC51 298deg, #BCEF28 360deg
+    );
+}
+
+/* Label container - positioned around the ring */
+section.doughnut .msg-doughnut-label {
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+    width: 160px;
+}
+
+section.doughnut .msg-doughnut-label strong {
+    display: block;
+    font-size: 28pt;
+    font-weight: 700;
+    color: var(--msg-black);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+section.doughnut .msg-doughnut-label p {
+    margin: 0;
+    font-size: 12pt;
+    color: var(--msg-dark-gray);
+    line-height: 1.4;
+}
+
+/* Label 1: 30% segment - midpoint at 54deg (right side) */
+section.doughnut .msg-doughnut-label.label-1 {
+    top: 50%;
+    left: calc(100% + 40px);
+    transform: translateY(-50%);
+    text-align: left;
+}
+
+/* Label 2: 35% segment - midpoint at 172deg (bottom center) */
+section.doughnut .msg-doughnut-label.label-2 {
+    top: calc(100% + 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Label 3: 35% segment - midpoint at 298deg (top-left) */
+section.doughnut .msg-doughnut-label.label-3 {
+    top: 20px;
+    right: calc(100% + 40px);
+    text-align: right;
+}
+
 /* ========== Statistics Cards ========== */
 .msg-stat-card {
     background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%);

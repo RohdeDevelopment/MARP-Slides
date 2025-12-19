@@ -458,6 +458,108 @@ Anpassungen vornehmen
 
 ---
 
+<!-- _class: doughnut -->
+
+# Doughnut Chart mit **Highlight-Segment**
+
+<div class="msg-doughnut">
+
+<div class="msg-doughnut-label label-1">
+
+**30%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-2">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-3">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: doughnut -->
+
+# Doughnut Chart **Variante 1** (Petrol, Yellow, Pink)
+
+<div class="msg-doughnut gradients-b">
+
+<div class="msg-doughnut-label label-1">
+
+**30%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-2">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-3">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: doughnut -->
+
+# Doughnut Chart **Variante 2** (Purple, Red, Green)
+
+<div class="msg-doughnut gradients-c">
+
+<div class="msg-doughnut-label label-1">
+
+**30%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-2">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-3">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+</div>
+
+---
+
 <!-- _class: chapter -->
 
 # Timeline & Flow
