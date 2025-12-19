@@ -1112,61 +1112,150 @@ section.steps>ol>li>span.step-label-active {
     margin-top: 5px;
 }
 
-/* ========== Cycle/PDCA Slide ========== */
-/* Usage: <!-- _class: cycle --> */
-section.cycle {
-    padding: 185px 33px 80px 65px;
+/* ========== Cycle Flow - Path Layout ========== */
+/* Usage: <!-- _class: cycle-flow --> */
+/* Rounded rectangular track with waypoint markers */
+/* Monochromatic msg-red (#A01441) with varying opacity */
+
+section.cycle-flow {
+    padding: 140px 33px 80px 65px;
 }
 
-section.cycle>.msg-cycle-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
-    height: calc(100% - 100px);
-}
-
-section.cycle .msg-cycle-item {
-    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
-    border: 2px solid #E0E0E0;
-    border-radius: 12px;
-    padding: 25px;
+section.cycle-flow > .msg-cycle-path {
     position: relative;
+    width: 100%;
+    height: calc(100% - 40px);
+    margin-top: 10px;
 }
 
-section.cycle .msg-cycle-item h4 {
-    margin: 0 0 15px 0;
-    font-size: 20pt;
+/* The rounded rectangular track */
+section.cycle-flow > .msg-cycle-path::before {
+    content: '';
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    right: 100px;
+    bottom: 70px;
+    border: 4px solid var(--msg-gray);
+    border-radius: 50px;
+}
+
+/* Directional arrows on the track - all msg-red */
+section.cycle-flow > .msg-cycle-path::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    /* SVG arrows: all in msg-red #A01441 */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjgwIj48cGF0aCBkPSJNMjcwIDU1bDEyIDEyLTEyIDEyIiBmaWxsPSJub25lIiBzdHJva2U9IiNBMDE0NDEiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTM0NSAxNTVsLTEyIDEyIDEyIDEyIiBmaWxsPSJub25lIiBzdHJva2U9IiNBMDE0NDEiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTEzMCAyMjVsLTEyLTEyIDEyLTEyIiBmaWxsPSJub25lIiBzdHJva2U9IiNBMDE0NDEiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZD0iTTU1IDEyNWwxMi0xMi0xMi0xMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTAxNDQxIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* Waypoint markers on the track */
+section.cycle-flow .msg-cycle-waypoint {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    background: white;
+    padding: 10px;
+}
+
+/* Colored circle marker - base style */
+section.cycle-flow .msg-cycle-waypoint::before {
+    content: '';
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(160, 20, 65, 0.25);
+}
+
+section.cycle-flow .msg-cycle-waypoint h4 {
+    margin: 0 0 6px 0;
+    font-size: 18pt;
     font-weight: 700;
     color: var(--msg-red);
 }
 
-section.cycle .msg-cycle-item p {
+section.cycle-flow .msg-cycle-waypoint p {
     margin: 0;
-    font-size: 14pt;
-    color: var(--msg-black);
+    font-size: 12pt;
+    color: var(--msg-dark-gray);
+    max-width: 160px;
+    line-height: 1.4;
+}
+
+/* Plan - Top center (lightest red - 40% opacity) */
+section.cycle-flow .msg-cycle-waypoint:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section.cycle-flow .msg-cycle-waypoint:nth-child(1)::before {
+    background: rgba(160, 20, 65, 0.4);
+}
+
+/* Do - Right center (medium-light red - 60% opacity) */
+section.cycle-flow .msg-cycle-waypoint:nth-child(2) {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+section.cycle-flow .msg-cycle-waypoint:nth-child(2)::before {
+    background: rgba(160, 20, 65, 0.6);
+}
+
+/* Check - Bottom center (medium-dark red - 80% opacity) */
+section.cycle-flow .msg-cycle-waypoint:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column-reverse;
+}
+section.cycle-flow .msg-cycle-waypoint:nth-child(3)::before {
+    margin-bottom: 0;
+    margin-top: 12px;
+    background: rgba(160, 20, 65, 0.8);
+}
+
+/* Act - Left center (full red - 100% opacity) */
+section.cycle-flow .msg-cycle-waypoint:nth-child(4) {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+section.cycle-flow .msg-cycle-waypoint:nth-child(4)::before {
+    background: var(--msg-red);
 }
 
 /* ========== Statistics Cards ========== */
 .msg-stat-card {
-    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
-    border: 2px solid #E0E0E0;
-    border-radius: 12px;
-    padding: 30px 20px;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%);
+    border: 2px solid var(--msg-red);
+    border-radius: 8px;
+    padding: 36px 24px 28px;
     text-align: center;
 }
 
 .msg-stat-card .stat-number {
-    font-size: 48pt;
+    font-size: 56pt;
     font-weight: 700;
     color: var(--msg-red);
     line-height: 1;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
 }
 
 .msg-stat-card .stat-label {
     font-size: 14pt;
+    font-weight: 600;
     color: var(--msg-dark-gray);
 }
 

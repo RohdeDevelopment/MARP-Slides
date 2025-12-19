@@ -416,41 +416,41 @@ Für Kennzahlen und Metriken
 
 ---
 
-<!-- _class: cycle -->
+<!-- _class: cycle-flow -->
 
 # PDCA Zyklus
 
-<div class="msg-cycle-container">
+<div class="msg-cycle-path">
 
-<div class="msg-cycle-item">
+<div class="msg-cycle-waypoint">
 
 #### Plan
 
-Beispieltext Plan mit zweiter Zeile
+Ziele definieren und Maßnahmen planen
 
 </div>
 
-<div class="msg-cycle-item">
+<div class="msg-cycle-waypoint">
 
 #### Do
 
-Beispieltext Do mit zweiter Zeile
+Maßnahmen umsetzen
 
 </div>
 
-<div class="msg-cycle-item">
+<div class="msg-cycle-waypoint">
 
 #### Check
 
-Beispieltext Check mit zweiter Zeile
+Ergebnisse prüfen und bewerten
 
 </div>
 
-<div class="msg-cycle-item">
+<div class="msg-cycle-waypoint">
 
 #### Act
 
-Beispieltext Act mit zweiter Zeile
+Anpassungen vornehmen
 
 </div>
 

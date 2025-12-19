@@ -68,8 +68,10 @@ The theme supports multiple slide types activated via Marp's `<!-- _class: type 
   - Add `<span class="step-arrow">▼</span>` for down arrow indicator
   - Add `<span class="step-label">Label</span>` for text below arrow
   - Use `step-arrow-active` and `step-label-active` classes for highlighted step
-- **Cycle slide** (`_class: cycle`): 4-quadrant layout for PDCA or similar cycles
-  - Use `.msg-cycle-container` with `.msg-cycle-item` elements
+- **Cycle Flow** (`_class: cycle-flow`): Path-based PDCA with waypoint markers
+  - Use `.msg-cycle-path` container with `.msg-cycle-waypoint` elements
+  - Rounded rectangular track with monochromatic red circle markers (40%, 60%, 80%, 100% opacity)
+  - Directional arrows integrated into the path showing clockwise flow
 - **Timeline slide** (`_class: timeline`): Horizontal timeline with 3 alternating events
 - **Timeline extended** (`_class: timeline-extended`): Extended timeline for 6-8 events
 
@@ -334,43 +336,49 @@ Optionaler Subtitle
 <span class="step-label">Fifth Step</span>
 ```
 
-**Example: PDCA Cycle Slide**
+**Example: PDCA Cycle Flow Slide**
+
+The cycle-flow slide automatically applies:
+- Monochromatic red waypoint markers (40%, 60%, 80%, 100% opacity progression)
+- Directional arrows showing clockwise flow
+- Rounded rectangular path layout
+
 ```markdown
-<!-- _class: cycle -->
+<!-- _class: cycle-flow -->
 
 # PDCA Zyklus
 
-<div class="msg-cycle-container">
+<div class="msg-cycle-path">
 
-<div class="msg-cycle-item">
+<div class="msg-cycle-waypoint">
 
 #### Plan
 
-Beschreibung
+Ziele definieren und Maßnahmen planen
 
 </div>
 
-<div class="msg-cycle-item">
+<div class="msg-cycle-waypoint">
 
 #### Do
 
-Beschreibung
+Maßnahmen umsetzen
 
 </div>
 
-<div class="msg-cycle-item">
+<div class="msg-cycle-waypoint">
 
 #### Check
 
-Beschreibung
+Ergebnisse prüfen und bewerten
 
 </div>
 
-<div class="msg-cycle-item">
+<div class="msg-cycle-waypoint">
 
 #### Act
 
-Beschreibung
+Anpassungen vornehmen
 
 </div>
 
