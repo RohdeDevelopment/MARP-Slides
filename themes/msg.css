@@ -1056,15 +1056,17 @@ section.steps>ol>li>strong {
 }
 
 /* White fill inside the chevron (creates black border effect) */
+/* Border thickness: 2px on all sides */
+/* Inner arrow points use same 20px as outer - the 2px inset handles the border */
 section.steps>ol>li>strong::before {
     content: "";
     position: absolute;
     top: 2px;
-    left: 3px;
-    right: 3px;
+    left: 2px;
+    right: 2px;
     bottom: 2px;
     background: white;
-    clip-path: polygon(0 0, calc(100% - 17px) 0, 100% 50%, calc(100% - 17px) 100%, 0 100%, 17px 50%);
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%, 20px 50%);
     z-index: -1;
 }
 
