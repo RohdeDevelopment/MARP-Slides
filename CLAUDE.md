@@ -73,10 +73,12 @@ The theme supports multiple slide types activated via Marp's `<!-- _class: type 
   - Rounded rectangular track with monochromatic red circle markers (40%, 60%, 80%, 100% opacity)
   - Directional arrows integrated into the path showing clockwise flow
 - **Doughnut Chart** (`_class: doughnut`): Ring chart with 3 sections
-  - First section: gradient highlight (teal→green→lime)
-  - Other sections: gray tones with different opacity
-  - Use `.msg-doughnut` container with `.msg-doughnut-label` elements
-  - Labels positioned around the ring with percentage + description
+  - Use `.msg-doughnut` container with `.msg-doughnut-label` elements (`.label-1`, `.label-2`, `.label-3`)
+  - Labels positioned around the ring with percentage (bold) + description text
+  - **Variants:**
+    - Default (no class): First section gradient highlight (teal→green→lime), others gray
+    - `.gradients-b`: Petrol, Yellow, Pink gradients (Variante 1)
+    - `.gradients-c`: Purple, Red, Green gradients (Variante 2)
 - **Timeline slide** (`_class: timeline`): Horizontal timeline with 3 alternating events
 - **Timeline extended** (`_class: timeline-extended`): Extended timeline for 6-8 events
 
@@ -390,7 +392,7 @@ Anpassungen vornehmen
 </div>
 ```
 
-**Example: Doughnut Chart Slide**
+**Example: Doughnut Chart Slide (Default with highlight)**
 ```markdown
 <!-- _class: doughnut -->
 
@@ -422,6 +424,28 @@ Ich bin ein kleines Label
 
 </div>
 
+</div>
+```
+
+**Example: Doughnut Chart Variante 1 (Petrol, Yellow, Pink)**
+```markdown
+<!-- _class: doughnut -->
+
+# Doughnut Chart **Variante 1**
+
+<div class="msg-doughnut gradients-b">
+  <!-- same label structure as above -->
+</div>
+```
+
+**Example: Doughnut Chart Variante 2 (Purple, Red, Green)**
+```markdown
+<!-- _class: doughnut -->
+
+# Doughnut Chart **Variante 2**
+
+<div class="msg-doughnut gradients-c">
+  <!-- same label structure as above -->
 </div>
 ```
 
