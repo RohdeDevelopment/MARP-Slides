@@ -38,13 +38,49 @@ The theme is implemented in a single CSS file [themes/msg.css](themes/msg.css) t
 
 ### Slide Types
 The theme supports multiple slide types activated via Marp's `<!-- _class: type -->` directive:
+
+**Basic Slides:**
 - **Standard slide**: Default layout with header, footer, pagination
 - **Title slide** (`_class: title`): Landing page with large title, subtitle, and decorative circle
 - **Chapter slide** (`_class: chapter`): Section divider with background image
   - **IMPORTANT**: The background image can crop long subtitles. If the `##` subtitle is longer than ~25 characters, use `<br>` to add a line break (e.g., `## Long subtitle text<br>continues here`)
+- **Chapter numbered** (`_class: chapter-numbered`): Chapter slide with red circle containing chapter number (01, 02, etc.)
+  - Number displayed in small red circle with white text above the title
+  - Title and subtitle have max-width of 400px to prevent overlap with background image
 - **Agenda slide** (`_class: agenda`): Numbered list with custom counter styling
+  - Use `**bold**` to highlight the current agenda item in red
 - **End slide** (`_class: end`): Closing slide similar to title slide
-- **Timeline slide** (`_class: timeline`): Horizontal timeline with alternating events
+
+**Quote & Keymessage:**
+- **Quote slide** (`_class: quote`): Centered italic text for quotes or key messages
+  - Use `**bold**` to highlight key words in red
+  - Add author/source as `## Author Name` below the quote
+- **Quote image slide** (`_class: quote-image`): Quote with full background image and white box overlay
+  - White box has rounded corners (top-right and bottom-right)
+  - Use `![quote-bg](path)` for background image
+  - Use `.quote-box` div with `#### Quote text` and paragraph for author
+
+**Process & Data:**
+- **Steps slide** (`_class: steps`): Horizontal chevron-shaped process steps
+  - Each step is a chevron arrow shape with black border
+  - Use numbered list with `**01**`, `**02**`, etc. for the chevron content
+  - Use `**_04_**` (bold + italic) to highlight the active/current step with gradient fill
+  - Add `<span class="step-arrow">▼</span>` for down arrow indicator
+  - Add `<span class="step-label">Label</span>` for text below arrow
+  - Use `step-arrow-active` and `step-label-active` classes for highlighted step
+- **Cycle Flow** (`_class: cycle-flow`): Path-based PDCA with waypoint markers
+  - Use `.msg-cycle-path` container with `.msg-cycle-waypoint` elements
+  - Rounded rectangular track with monochromatic red circle markers (40%, 60%, 80%, 100% opacity)
+  - Directional arrows integrated into the path showing clockwise flow
+- **Doughnut Chart** (`_class: doughnut`): Ring chart with 3 sections
+  - Use `.msg-doughnut` container with `.msg-doughnut-label` elements (`.label-1`, `.label-2`, `.label-3`)
+  - Labels positioned around the ring with percentage (bold) + description text
+  - **Variants:**
+    - Default (no class): First section gradient highlight (teal→green→lime), others gray
+    - `.gradients-b`: Petrol, Yellow, Pink gradients (Variante 1)
+    - `.gradients-c`: Purple, Red, Green gradients (Variante 2)
+- **Timeline slide** (`_class: timeline`): Horizontal timeline with 3 alternating events
+- **Timeline extended** (`_class: timeline-extended`): Extended timeline for 6-8 events
 
 ### Layout Components
 
@@ -87,19 +123,69 @@ The theme now includes reusable layout components that can be used in any presen
 - First column bold and colored in msg-red
 - Alternating row colors for readability
 
+**Statistics & Labels:**
+- `.msg-stat-card`: Card for displaying statistics/metrics with `.stat-number` and `.stat-label`
+- `.msg-label`: Inline label/tag component with color variants (`.petrol`, `.yellow`, `.green`, `.purple`, `.pink`, `.gray`)
+
+**Flow Layout:**
+- `.msg-flow`: Container for start-to-end process flows
+- `.msg-flow-start`, `.msg-flow-end`: Start and end point boxes
+- `.msg-flow-arrow`: Arrow element between points
+
+**Multi-Person Contact:**
+- `.msg-contact-grid`: Grid layout for 4+ contact persons on one slide
+
 ### Brand Colors
 Colors are defined as CSS custom properties (line 12-24 in msg.css):
 - `--msg-red`: #A01441 (primary brand color)
 - `--msg-dark-gray`: #6F6F6F
 - `--msg-gray`: #ACACAC
-- `--msg-petrol`, `--msg-yellow`, `--msg-green`, `--msg-purple`, `--msg-pink`: Additional accent colors
+- `--msg-petrol`: #139EAD
+- `--msg-yellow`: #F5B510
+- `--msg-green`: #70DC51
+- `--msg-purple`: #5866E3
+- `--msg-pink`: #D74B97
+
+### Brand Guidelines (from Corporate Design)
+
+**Typography:**
+- **Primary font**: Open Sans (MARP) / Aptos (PowerPoint)
+- **Headings**: Bold (700) for emphasis
+- **Body text**: Light (300) or Regular (400)
+- **Accent text**: First or second line of a headline can be set in red bold for emphasis
+
+**Design Principles:**
+- Use msg-red (#A01441) as primary accent color
+- Maintain consistent spacing and padding
+- 16:9 aspect ratio (1280x720px)
+- Logo placement: top-right corner
 
 ### Asset Management
 Images are stored in [themes/assets/](themes/assets/) and referenced in Markdown:
-- `title-msg.png`: Background for title/end slides
-- `chapter-msg.png`: Background for chapter slides
-- `chapter-automotive.png`, `title-automotive.png`: Alternative backgrounds
+
+**Main Theme Assets:**
+- `title-msg.png`: Background for title/end slides (standard msg)
+- `title-automotive.png`: Background for automotive-themed title slides
+- `chapter-msg.png`: Background for chapter slides (standard msg)
+- `chapter-automotive.png`: Background for automotive-themed chapter slides
+- `contact-msg.png`: Background for contact slide right side
 - SVG logos are embedded as base64 in CSS to eliminate external dependencies
+
+**Folienmaster Reference Images:**
+The `themes/assets/folienmaster-reference/` folder contains extracted images from the corporate PPTX template:
+
+| Image Range | Type | Description |
+|-------------|------|-------------|
+| `image1-12` | Decorative | Title/chapter backgrounds, logos, decorative elements |
+| `image13-14, 20-24` | Backgrounds | Automotive theme backgrounds (high-quality photos) |
+| `image25-30` | Backgrounds | Modern design backgrounds with gradients |
+| `image31-42` | Content | Diagrams, illustrations, content images |
+| `image43-87` | Icons | SVG icons and small graphics |
+
+**Recommended Image Usage:**
+- `image13.jpg` (1920x1080): Automotive title background
+- `image30.png` (1280x720): Gradient background for custom slides
+- `image25-28.png`: Modern design backgrounds with transparency
 
 ## Usage Pattern
 
@@ -174,7 +260,10 @@ Our key differentiators
 </div>
 ```
 
-**Example: Contact Slide**
+**Example: Contact Slide (1-2 persons)**
+
+Use `msg-contact-layout` for 1-2 contact persons. Each presentation should have exactly ONE contact slide as the last slide before the end slide. The company info box on the right side is mandatory.
+
 ```markdown
 <!-- _class: msg-contact-layout -->
 
@@ -197,15 +286,257 @@ Our key differentiators
 
 <div class="msg-company-info">
 
-**Company Name**
+**msg systems ag**
 
-Address Line 1
-Postal Code City
+Robert-Bürkle-Straße 1
+85737 Ismaning
 
-Phone
-Fax
++49 89 96101-0
 
-[email@msg.group](mailto:email@msg.group)
+[info@msg.group](mailto:info@msg.group)
+
+</div>
+```
+
+**Example: Contact Slide (up to 8 persons)**
+
+Use `msg-contact-layout-extended` when you need to display up to 8 contact persons. The contacts are arranged in a 2x4 grid, vertically centered. The company info box remains on the right side.
+
+```markdown
+<!-- _class: msg-contact-layout-extended -->
+
+# Ansprechpartner
+
+<div class="msg-contact-grid-extended">
+
+<div class="msg-contact-person">
+<img src="path/to/photo1.jpg" alt="Person 1">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<!-- Repeat for each contact person (up to 8) -->
+
+</div>
+
+![contact-bg h:720](themes/assets/contact-msg.png)
+
+<div class="msg-company-info">
+
+**msg systems ag**
+
+Robert-Bürkle-Straße 1
+85737 Ismaning
+
++49 89 96101-0
+
+[info@msg.group](mailto:info@msg.group)
+
+</div>
+```
+
+**Contact Slide Guidelines:**
+- Every presentation must have exactly **one contact slide**
+- Always include the **company info box** on the right side
+- Always include the **background image** (`contact-bg`)
+- Choose the appropriate layout based on number of contacts:
+  - `msg-contact-layout`: 1-2 persons (larger photos, more detail)
+  - `msg-contact-layout-extended`: 3-8 persons (compact grid layout)
+
+**Example: Quote/Keymessage Slide**
+```markdown
+<!-- _class: quote -->
+
+# Zitat oder **Keymessage** einfügen
+
+## Dr. Jürgen Zehetmaier, Vorsitzender msg
+```
+
+**Example: Quote with Background Image**
+```markdown
+<!-- _class: quote-image -->
+
+![quote-bg](themes/assets/folienmaster-reference/image28.png)
+
+<div class="quote-box">
+
+#### Zitat oder **Keymessage** einfügen
+
+Optionaler Subtitle
+
+</div>
+```
+
+**Example: Steps/Process Slide (Chevron Style)**
+```markdown
+<!-- _class: steps -->
+
+# Headline with **bold keywords** possible
+
+1. **01**
+<span class="step-arrow">▼</span>
+<span class="step-label">First Step</span>
+2. **02**
+<span class="step-arrow">▼</span>
+<span class="step-label">Second Step</span>
+3. **03**
+<span class="step-arrow">▼</span>
+<span class="step-label">Third Step</span>
+4. **_04_**
+<span class="step-arrow-active">▼</span>
+<span class="step-label-active">Active Step</span>
+5. **05**
+<span class="step-arrow">▼</span>
+<span class="step-label">Fifth Step</span>
+```
+
+**Example: PDCA Cycle Flow Slide**
+
+The cycle-flow slide automatically applies:
+- Monochromatic red waypoint markers (40%, 60%, 80%, 100% opacity progression)
+- Directional arrows showing clockwise flow
+- Rounded rectangular path layout
+
+```markdown
+<!-- _class: cycle-flow -->
+
+# PDCA Zyklus
+
+<div class="msg-cycle-path">
+
+<div class="msg-cycle-waypoint">
+
+#### Plan
+
+Ziele definieren und Maßnahmen planen
+
+</div>
+
+<div class="msg-cycle-waypoint">
+
+#### Do
+
+Maßnahmen umsetzen
+
+</div>
+
+<div class="msg-cycle-waypoint">
+
+#### Check
+
+Ergebnisse prüfen und bewerten
+
+</div>
+
+<div class="msg-cycle-waypoint">
+
+#### Act
+
+Anpassungen vornehmen
+
+</div>
+
+</div>
+```
+
+**Example: Doughnut Chart Slide (Default with highlight)**
+```markdown
+<!-- _class: doughnut -->
+
+# Headline with **bold keywords** possible
+
+<div class="msg-doughnut">
+
+<div class="msg-doughnut-label label-1">
+
+**30%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-2">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+<div class="msg-doughnut-label label-3">
+
+**35%**
+
+Ich bin ein kleines Label
+
+</div>
+
+</div>
+```
+
+**Example: Doughnut Chart Variante 1 (Petrol, Yellow, Pink)**
+```markdown
+<!-- _class: doughnut -->
+
+# Doughnut Chart **Variante 1**
+
+<div class="msg-doughnut gradients-b">
+  <!-- same label structure as above -->
+</div>
+```
+
+**Example: Doughnut Chart Variante 2 (Purple, Red, Green)**
+```markdown
+<!-- _class: doughnut -->
+
+# Doughnut Chart **Variante 2**
+
+<div class="msg-doughnut gradients-c">
+  <!-- same label structure as above -->
+</div>
+```
+
+**Example: Statistics Cards**
+```markdown
+<div class="msg-grid-3col">
+
+<div class="msg-stat-card">
+<div class="stat-number">29%</div>
+<div class="stat-label">Beispieltext</div>
+</div>
+
+<div class="msg-stat-card">
+<div class="stat-number">71%</div>
+<div class="stat-label">Beispieltext</div>
+</div>
+
+</div>
+```
+
+**Example: Flow Layout**
+```markdown
+<div class="msg-flow">
+
+<div class="msg-flow-start">
+
+#### Startpunkt
+
+Beschreibung
+
+</div>
+
+<div class="msg-flow-arrow">→</div>
+
+<div class="msg-flow-end">
+
+#### Endpunkt
+
+Beschreibung
+
+</div>
 
 </div>
 ```
