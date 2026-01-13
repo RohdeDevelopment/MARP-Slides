@@ -733,6 +733,103 @@ Robert-Bürkle-Straße 1
 
 ---
 
+<!-- _class: msg-contact-layout-extended -->
+
+# Ansprechpartner (8 Personen)
+
+<div class="msg-contact-grid-extended">
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/60" alt="Person 1">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/60" alt="Person 2">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/60" alt="Person 3">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/60" alt="Person 4">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/60" alt="Person 5">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/60" alt="Person 6">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/60" alt="Person 7">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/60" alt="Person 8">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+</div>
+
+![contact-bg h:720](themes/assets/contact-msg.png)
+
+<div class="msg-company-info">
+
+**msg systems ag**
+
+Robert-Bürkle-Straße 1
+85737 Ismaning
+
++49 89 96101-0
+
+[info@msg.group](mailto:info@msg.group)
+
+</div>
+
+---
+
 <!-- _class: end -->
 
 # Vielen Dank

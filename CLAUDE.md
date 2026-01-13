@@ -260,7 +260,10 @@ Our key differentiators
 </div>
 ```
 
-**Example: Contact Slide**
+**Example: Contact Slide (1-2 persons)**
+
+Use `msg-contact-layout` for 1-2 contact persons. Each presentation should have exactly ONE contact slide as the last slide before the end slide. The company info box on the right side is mandatory.
+
 ```markdown
 <!-- _class: msg-contact-layout -->
 
@@ -283,18 +286,65 @@ Our key differentiators
 
 <div class="msg-company-info">
 
-**Company Name**
+**msg systems ag**
 
-Address Line 1
-Postal Code City
+Robert-Bürkle-Straße 1
+85737 Ismaning
 
-Phone
-Fax
++49 89 96101-0
 
-[email@msg.group](mailto:email@msg.group)
+[info@msg.group](mailto:info@msg.group)
 
 </div>
 ```
+
+**Example: Contact Slide (up to 8 persons)**
+
+Use `msg-contact-layout-extended` when you need to display up to 8 contact persons. The contacts are arranged in a 2x4 grid, vertically centered. The company info box remains on the right side.
+
+```markdown
+<!-- _class: msg-contact-layout-extended -->
+
+# Ansprechpartner
+
+<div class="msg-contact-grid-extended">
+
+<div class="msg-contact-person">
+<img src="path/to/photo1.jpg" alt="Person 1">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<!-- Repeat for each contact person (up to 8) -->
+
+</div>
+
+![contact-bg h:720](themes/assets/contact-msg.png)
+
+<div class="msg-company-info">
+
+**msg systems ag**
+
+Robert-Bürkle-Straße 1
+85737 Ismaning
+
++49 89 96101-0
+
+[info@msg.group](mailto:info@msg.group)
+
+</div>
+```
+
+**Contact Slide Guidelines:**
+- Every presentation must have exactly **one contact slide**
+- Always include the **company info box** on the right side
+- Always include the **background image** (`contact-bg`)
+- Choose the appropriate layout based on number of contacts:
+  - `msg-contact-layout`: 1-2 persons (larger photos, more detail)
+  - `msg-contact-layout-extended`: 3-8 persons (compact grid layout)
 
 **Example: Quote/Keymessage Slide**
 ```markdown

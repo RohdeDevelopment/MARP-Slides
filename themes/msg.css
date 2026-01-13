@@ -1619,3 +1619,122 @@ section.chapter-numbered .chapter-number {
 .msg-contact-grid .msg-contact-info .email {
     font-size: 11pt;
 }
+
+/* ========== Extended Contact Layout (8 persons) ========== */
+/* Usage: <!-- _class: msg-contact-layout-extended --> */
+/* Full-page contact slide with 8 contact persons in 2 rows of 4 */
+section.msg-contact-layout-extended {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: white;
+}
+
+section.msg-contact-layout-extended h1 {
+    position: absolute;
+    top: 63px;
+    left: 65px;
+    z-index: 5;
+}
+
+section.msg-contact-layout-extended .msg-contact-grid-extended {
+    position: absolute;
+    top: 50%;
+    left: 65px;
+    transform: translateY(-50%);
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 15px 10px;
+    z-index: 5;
+}
+
+section.msg-contact-layout-extended .msg-contact-grid-extended .msg-contact-person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+    gap: 8px;
+}
+
+section.msg-contact-layout-extended .msg-contact-grid-extended .msg-contact-person img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+section.msg-contact-layout-extended .msg-contact-grid-extended .msg-contact-info {
+    flex: 1;
+}
+
+section.msg-contact-layout-extended .msg-contact-grid-extended .msg-contact-info .name {
+    font-size: 11pt;
+    font-weight: 700;
+    color: var(--msg-dark-gray);
+    margin: 0 0 2px 0;
+}
+
+section.msg-contact-layout-extended .msg-contact-grid-extended .msg-contact-info .role {
+    font-size: 9pt;
+    color: var(--msg-dark-gray);
+    margin: 0 0 2px 0;
+}
+
+section.msg-contact-layout-extended .msg-contact-grid-extended .msg-contact-info .email {
+    font-size: 9pt;
+    color: var(--msg-red);
+    text-decoration: underline;
+}
+
+/* Company info box - same as standard contact layout */
+section.msg-contact-layout-extended .msg-company-info {
+    position: absolute;
+    bottom: 80px;
+    right: 60px;
+    background: white;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 25px;
+    font-size: 13pt;
+    line-height: 1.8;
+    width: 350px;
+    z-index: 10;
+}
+
+section.msg-contact-layout-extended .msg-company-info strong {
+    display: block;
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--msg-dark-gray);
+    margin-bottom: 12px;
+}
+
+section.msg-contact-layout-extended .msg-company-info a {
+    color: var(--msg-red);
+    text-decoration: none;
+}
+
+/* Background image positioning */
+section.msg-contact-layout-extended img[alt~="contact-bg"],
+section.msg-contact-layout-extended p img[alt~="contact-bg"] {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 40% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    z-index: 1 !important;
+    border-radius: 0 !important;
+    flex-shrink: initial !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
