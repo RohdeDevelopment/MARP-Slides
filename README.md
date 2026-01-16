@@ -52,6 +52,56 @@ paginate: true
 ![chapter h:720](themes/assets/chapter-msg.png)
 ```
 
+## Usage
+
+This theme is designed for AI-assisted presentation creation using **Claude Code**. The AI reads the theme documentation in [CLAUDE.md](CLAUDE.md) and generates presentations following msg corporate guidelines.
+
+### Creating Presentations with Claude Code
+
+1. Open this repository in VSCode with Claude Code
+2. Ask Claude to create a presentation, e.g.:
+   - *"Create a presentation about our new product launch"*
+   - *"Convert this PPTX to Marp format"*
+   - *"Create an agenda slide with 5 topics"*
+3. Claude will create the presentation in the `presentations/` folder
+4. Preview using the Marp VSCode extension
+
+### Folder Structure
+
+Presentations are stored in `presentations/` (gitignored, not pushed to the repository):
+
+```
+marp-msg-theme/
+├── themes/                    # Theme files (shared)
+│   ├── msg.css
+│   └── assets/
+├── presentations/             # Your presentations (gitignored)
+│   ├── product-launch/
+│   │   ├── product-launch.md
+│   │   └── speaker-photo.jpg
+│   └── quarterly-review/
+│       └── quarterly-review.md
+├── Folienmaster.md            # Reference examples
+└── CLAUDE.md                  # AI instructions
+```
+
+Each presentation lives in its own subfolder with any local assets (photos, images). Theme assets are referenced via relative paths:
+
+```markdown
+![title h:720](../../themes/assets/title-msg.png)
+```
+
+### Manual Creation
+
+You can also create presentations manually. Every presentation should include:
+
+1. **Title slide** (`_class: title`) - First slide
+2. **Agenda slide** (`_class: agenda`) - Second slide
+3. **Content slides** - Your presentation content
+4. **Contact slide** (`_class: msg-contact-layout`) - Last slide
+
+See [Folienmaster.md](Folienmaster.md) for examples of all slide types.
+
 ## Layout Components
 
 The theme includes reusable layout components:
