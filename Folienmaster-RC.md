@@ -322,6 +322,8 @@ Expertise across multiple domains:
 
 # Contact
 
+<div class="rc-thank-you">Thank you!</div>
+
 <div class="rc-contact-left">
 
 <div class="rc-contact-person">
@@ -336,11 +338,6 @@ Expertise across multiple domains:
 
 </div>
 
-<div class="rc-linkedin-qr">
-<img src="themes/assets/rohde-consulting/linkedin-qr.svg" alt="LinkedIn QR">
-<span>Scan for LinkedIn</span>
-</div>
-
 ![contact-bg h:720](themes/assets/rohde-consulting/contact-rc.svg)
 
 <div class="rc-company-info">
@@ -352,11 +349,3 @@ Munich, Germany
 [rohde.development@gmail.com](mailto:rohde.development@gmail.com)
 
 </div>
-
----
-
-<!-- _class: end -->
-
-# Thank You
-
-![end h:720](themes/assets/rohde-consulting/title-rc.svg)
