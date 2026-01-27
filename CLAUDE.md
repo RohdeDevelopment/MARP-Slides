@@ -6,13 +6,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a custom Marp theme for creating presentations with msg corporate branding. It's an unofficial theme that provides slide templates with msg styling, colors, and layouts. The theme is built using CSS and leverages Marp's presentation framework to convert Markdown files into HTML presentations.
 
+## Quick Reference: Slide Classes
+
+| Class | Use For |
+|-------|---------|
+| (default) | Standard content slide |
+| `title` | First slide with background |
+| `chapter` | Section divider |
+| `chapter-numbered` | Section with number (01, 02) |
+| `agenda` | Numbered topic list |
+| `quote` | Centered quote/keymessage |
+| `quote-image` | Quote with background image |
+| `steps` | Horizontal chevron process |
+| `cycle-flow` | PDCA cycle diagram |
+| `doughnut` | Ring chart (3 sections) |
+| `timeline` | 3-event timeline |
+| `timeline-extended` | 6-8 event timeline |
+| `msg-contact-layout` | Contact (1-2 persons) |
+| `msg-contact-layout-extended` | Contact (3-8 persons) |
+| `end` | Closing slide |
+
 ## Development Workflow
 
 ### Preview Changes
-Use the Marp extension in VSCode to preview slides. The extension is configured in [.vscode/settings.json](.vscode/settings.json) to load the local theme file:
-```bash
-# No build process needed - changes to themes/msg.css are reflected immediately in Marp preview
-```
+Use the Marp extension in VSCode to preview slides. The extension is configured in [.vscode/settings.json](.vscode/settings.json) to load local theme files:
+- `themes/msg.css` - msg corporate branding (primary)
+- `themes/rohde-consulting.css` - Rohde Consulting variant
+
+Changes to CSS files are reflected immediately in Marp preview (no build process needed).
 
 ### Export to HTML
 Use Marp CLI or the VSCode extension to export presentations:
@@ -92,8 +113,8 @@ The theme supports multiple slide types activated via Marp's `<!-- _class: type 
 - **Footnotes**: Styled `div.footnote` element at bottom of slide
 - **Columns**: `div.multicolumn` uses CSS Grid for multi-column layouts
 
-#### Reusable Layout Components (NEW)
-The theme now includes reusable layout components that can be used in any presentation without custom CSS:
+#### Reusable Layout Components
+Reusable layout components that can be used in any presentation without custom CSS:
 
 **Grid Layouts:**
 - `.msg-grid-2col`: 2-column grid layout with 20px gap
@@ -718,3 +739,14 @@ For local assets (contact photos), use relative paths within the folder:
 - Padding and positioning are absolute pixel values, not responsive
 - Logo and decorative elements are base64-encoded to make the CSS file self-contained
 - All layout components are defined in msg.css - presentations should NOT include custom CSS unless absolutely necessary
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Theme not loading | Check `markdown.marp.themes` in `.vscode/settings.json` points to correct CSS path |
+| Background image not showing | Verify image path is correct; use `![title h:720](path)` syntax with height |
+| Chapter subtitle cropped | Add `<br>` for subtitles longer than ~25 characters |
+| Pagination overlaps content | Check footer/header aren't too long; content may need adjustment |
+| HTML elements not rendering | Ensure blank lines before/after HTML blocks in Markdown |
+| Contact photo not circular | Use `<img>` inside `.msg-contact-person`, not Markdown `![]()` syntax |
