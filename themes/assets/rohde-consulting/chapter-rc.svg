@@ -1,0 +1,44 @@
+<svg width="780" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chapterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196f3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a2a4a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2196f3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chapterBlueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#64b5f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="780" height="720" fill="#1a2a4a"/>
+
+  <!-- Large geometric diamond pattern -->
+  <g transform="translate(500, 360)">
+    <!-- Outer diamonds -->
+    <path d="M 0,-320 L 230,0 L 0,320 L -230,0 Z"
+          fill="none" stroke="#2196f3" stroke-width="2" opacity="0.2"/>
+    <path d="M 0,-260 L 185,0 L 0,260 L -185,0 Z"
+          fill="none" stroke="#2196f3" stroke-width="2" opacity="0.3"/>
+    <path d="M 0,-200 L 140,0 L 0,200 L -140,0 Z"
+          fill="none" stroke="#2196f3" stroke-width="2" opacity="0.4"/>
+    <path d="M 0,-140 L 100,0 L 0,140 L -100,0 Z"
+          fill="none" stroke="#2196f3" stroke-width="2" opacity="0.5"/>
+
+    <!-- Center filled diamond -->
+    <path d="M 0,-80 L 56,0 L 0,80 L -56,0 Z"
+          fill="url(#chapterBlueAccent)" opacity="0.7"/>
+  </g>
+
+  <!-- Horizontal accent lines -->
+  <line x1="0" y1="150" x2="400" y2="150" stroke="#2196f3" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="570" x2="350" y2="570" stroke="#2196f3" stroke-width="1" opacity="0.3"/>
+
+  <!-- Vertical accent bar (left side) -->
+  <rect x="0" y="200" width="6" height="320" fill="#2196f3" opacity="0.6"/>
+
+  <!-- Corner triangles -->
+  <path d="M 780,0 L 680,0 L 780,100 Z" fill="#2196f3" opacity="0.4"/>
+  <path d="M 780,720 L 680,720 L 780,620 Z" fill="#2196f3" opacity="0.4"/>
+</svg>

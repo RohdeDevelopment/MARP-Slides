@@ -11,3 +11,7 @@ themes/.DS_Store
 
 # Node modules
 node_modules
+
+# msg theme - local only
+themes/msg.css
+themes/assets/msg/
