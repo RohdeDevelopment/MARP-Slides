@@ -671,26 +671,35 @@ When creating new reusable components:
 ## Presentation File Organization
 
 ### Folder Structure
-Each presentation should be in its own folder under `presentations/`:
+Presentations are organized by theme/context:
+- **`presentations/msg/`** - msg corporate presentations (use `theme: msg`)
+- **`presentations/rohde-consulting/`** - Personal/Rohde Consulting presentations (use `theme: rohde-consulting`)
+
+Each presentation should be in its own subfolder:
 ```
 presentations/
-├── marp-for-business/
-│   ├── MARP for Business.md
-│   └── moritz.jpg              # Contact photo
-├── claude-vw/
-│   ├── ClaudeCode VW.md
-│   └── contact.jpg
-└── ikos-poznan/
-    ├── IKoS-Poznan.md
-    └── moritz.jpg
+├── msg/
+│   ├── marp-for-business/
+│   │   ├── MARP for Business.md
+│   │   └── moritz.jpg
+│   └── claude-vw/
+│       ├── ClaudeCode VW.md
+│       └── contact.jpg
+└── personal/
+    ├── ikos-poznan/
+    │   ├── IKoS-Poznan.md
+    │   └── moritz.jpg
+    └── tech-talk/
+        └── Tech-Talk.md
 ```
 
 ### Asset References from Presentation Folders
-When presentations are in `presentations/<name>/`, use relative paths to theme assets:
+When presentations are in `presentations/msg/<name>/` or `presentations/rohde-consulting/<name>/`, use relative paths to theme assets:
 ```markdown
-![title h:720](../../themes/assets/title-msg.png)
-![chapter h:720](../../themes/assets/chapter-msg.png)
-![contact-bg h:720](../../themes/assets/contact-msg.png)
+# From presentations/msg/<name>/ or presentations/rohde-consulting/<name>/
+![title h:720](../../../themes/assets/title-msg.png)
+![chapter h:720](../../../themes/assets/chapter-msg.png)
+![contact-bg h:720](../../../themes/assets/contact-msg.png)
 ```
 
 For local assets (contact photos), use relative paths within the folder:
