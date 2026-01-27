@@ -36,31 +36,26 @@ paginate: true
 
 ---
 
-# Company Overview
+# About Me
 
-Rohde Consulting provides **professional software development** and consulting services with a focus on modern technologies and agile methodologies.
+<div class="rc-about-me">
 
-<div class="rc-grid-2col">
-
-<div class="rc-card">
-
-#### Mission
-
-- Deliver high-quality solutions
-- Enable digital transformation
-- Foster innovation
-- Build lasting partnerships
-
+<div class="rc-profile">
+<img src="themes/assets/rohde-consulting/moritz.jpg" alt="Moritz Rohde">
+<div class="name">Moritz Rohde</div>
+<div class="role">Cloud & Software Architect<br>@ msg for automotive</div>
 </div>
 
-<div class="rc-card">
+<div class="rc-about-content">
 
-#### Values
+I specialize in designing and implementing **scalable cloud solutions** for the automotive industry, with a passion for **AI innovations**.
 
-- Technical excellence
-- Transparent communication
-- Customer focus
-- Continuous improvement
+#### Focus Areas
+
+- Cloud architecture (AWS, Azure)
+- Software architecture & design
+- AI & emerging technologies
+- DevOps & CI/CD pipelines
 
 </div>
 
@@ -72,7 +67,7 @@ Rohde Consulting provides **professional software development** and consulting s
 
 # Innovation through **expertise** and dedication to quality
 
-## Moritz Rohde, Founder
+## Moritz Rohde, Cloud & Software Architect
 
 ---
 
@@ -327,10 +322,10 @@ Expertise across multiple domains:
 <div class="rc-contact-left">
 
 <div class="rc-contact-person">
-<img src="themes/assets/rohde-consulting/logo.png" alt="Moritz Rohde">
+<img src="themes/assets/rohde-consulting/moritz.jpg" alt="Moritz Rohde">
 <div class="rc-contact-info">
 <div class="name">Moritz Rohde</div>
-<div class="role">Founder & Software Developer</div>
+<div class="role">Cloud & Software Architect @ msg for automotive</div>
 <div class="email">rohde.development@gmail.com</div>
 <a href="https://linkedin.com/in/rohde-moritz" class="linkedin">rohde-moritz</a>
 </div>
@@ -340,11 +335,15 @@ Expertise across multiple domains:
 
 ![contact-bg h:720](themes/assets/rohde-consulting/contact-rc.svg)
 
+<div class="rc-company-logo">
+<img src="themes/assets/rohde-consulting/logo.png" alt="Rohde Consulting">
+</div>
+
 <div class="rc-company-info">
 
 **Rohde Consulting**
 
-Munich, Germany
+Brunswick, Germany
 
 [rohde.development@gmail.com](mailto:rohde.development@gmail.com)
 
