@@ -11,7 +11,7 @@ paginate: true
 # Rohde Consulting
 ## Software Development & Consulting
 
-![title h:720](themes/assets/rohde-consulting/title-rc.svg)
+**Moritz Rohde** | Cloud & Software Architect
 
 ---
 
