@@ -1,4 +1,4 @@
-# marp-msg-theme
+# custom-marp-theme
 
 A custom Marp theme for creating presentations with msg corporate branding. This is an unofficial theme that provides slide templates with msg styling, colors, and layouts.
 
@@ -71,7 +71,7 @@ This theme is designed for AI-assisted presentation creation using **Claude Code
 Presentations are stored in `presentations/` (gitignored, not pushed to the repository):
 
 ```
-marp-msg-theme/
+custom-marp-theme/
 ├── themes/                    # Theme files (shared)
 │   ├── msg.css
 │   └── assets/
