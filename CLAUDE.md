@@ -45,6 +45,34 @@ Use Marp CLI or the VSCode extension to export presentations:
 ### Testing Changes
 Open [Folienmaster.md](Folienmaster.md) in VSCode with the Marp extension to test theme changes. This file contains examples of all slide types.
 
+### Adding Speaker Notes
+Speaker notes can be added to any slide using HTML comments. These notes are visible in presenter mode but not in the final presentation view.
+
+**Syntax:**
+```markdown
+---
+
+# Your Slide Title
+
+Slide content here...
+
+<!--
+Speaker Notes:
+
+Your detailed notes for this slide go here.
+You can use multiple paragraphs and format as needed.
+-->
+
+---
+```
+
+**Best Practices:**
+- Add speaker notes after all slide content but before the slide separator (`---`)
+- Use "Speaker Notes:" as a header for clarity
+- Write notes in a conversational style suitable for presenting
+- Include explanations, examples, or reminders that expand on slide bullet points
+- Notes support standard markdown formatting
+
 ### Importing from PowerPoint (PPTX)
 See [.claude/pptx-import-guide.md](.claude/pptx-import-guide.md) for detailed instructions on converting PPTX files to MARP presentations, including how to extract text content and images from the source file.
 
