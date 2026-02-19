@@ -309,6 +309,100 @@ Die wichtigsten Vorteile unserer Lösung
 
 ---
 
+# Dual Panel Layout
+
+Optionaler Untertitel zur Beschreibung der zwei Bereiche
+
+<div class="msg-dual-panel">
+
+<div class="msg-dual-panel-row">
+
+<div class="msg-dual-panel-card petrol">
+
+<div class="msg-dual-panel-badge">Label A</div>
+
+<div class="msg-dual-panel-title">Linker Panel Titel</div>
+
+<hr class="msg-dual-panel-divider">
+
+<div class="msg-dual-panel-grid">
+
+<div class="msg-dual-panel-item">
+<strong>Feature Eins</strong>
+<span>Kurze Beschreibung des ersten Features</span>
+</div>
+
+<div class="msg-dual-panel-item">
+<strong>Feature Zwei</strong>
+<span>Kurze Beschreibung des zweiten Features</span>
+</div>
+
+<div class="msg-dual-panel-item">
+<strong>Feature Drei</strong>
+<span>Kurze Beschreibung des dritten Features</span>
+</div>
+
+<div class="msg-dual-panel-item">
+<strong>Feature Vier</strong>
+<span>Kurze Beschreibung des vierten Features</span>
+</div>
+
+</div>
+
+<div class="msg-dual-panel-example">Beispiel: Beispieltext für linken Panel</div>
+
+</div>
+
+<div class="msg-dual-panel-plus">+</div>
+
+<div class="msg-dual-panel-card red">
+
+<div class="msg-dual-panel-badge">Label B</div>
+
+<div class="msg-dual-panel-title">Rechter Panel Titel</div>
+
+<hr class="msg-dual-panel-divider">
+
+<div class="msg-dual-panel-grid">
+
+<div class="msg-dual-panel-item">
+<strong>Feature Eins</strong>
+<span>Kurze Beschreibung des ersten Features</span>
+</div>
+
+<div class="msg-dual-panel-item">
+<strong>Feature Zwei</strong>
+<span>Kurze Beschreibung des zweiten Features</span>
+</div>
+
+<div class="msg-dual-panel-item">
+<strong>Feature Drei</strong>
+<span>Kurze Beschreibung des dritten Features</span>
+</div>
+
+<div class="msg-dual-panel-item">
+<strong>Feature Vier</strong>
+<span>Kurze Beschreibung des vierten Features</span>
+</div>
+
+</div>
+
+<div class="msg-dual-panel-example">Beispiel: Beispieltext für rechten Panel</div>
+
+</div>
+
+</div>
+
+<div class="msg-dual-panel-bar">
+
+Infozeile eins | Weitere Informationen<br>Infozeile zwei mit zusätzlichem Kontext
+
+</div>
+
+</div>
+
+---
+
 # Labels für Kategorisierung
 
 Labels können für Kategorien oder Tags verwendet werden:
@@ -667,6 +761,67 @@ Die erste Spalte ist automatisch fett und rot formatiert.
 <div class="name">Max Mustermann</div>
 <div class="role">Themenverantwortlicher</div>
 <div class="email">max.mustermann@msg.group</div>
+</div>
+</div>
+
+</div>
+
+![contact-bg h:720](themes/assets/contact-msg.png)
+
+<div class="msg-company-info">
+
+**msg systems ag**
+
+Robert-Bürkle-Straße 1
+85737 Ismaning
+
++49 89 96101-0
+
+[info@msg.group](mailto:info@msg.group)
+
+</div>
+
+---
+
+<!-- _class: msg-contact-layout msg-contact-layout-2x2 -->
+
+# Ansprechpartner (2x2 Layout)
+
+<div class="msg-contact-left">
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/75" alt="Person 1">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/75" alt="Person 2">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/75" alt="Person 3">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<div class="msg-contact-person">
+<img src="https://via.placeholder.com/75" alt="Person 4">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
 </div>
 </div>
 

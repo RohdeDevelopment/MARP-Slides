@@ -23,6 +23,7 @@ This is a custom Marp theme for creating presentations with msg corporate brandi
 | `timeline` | 3-event timeline |
 | `timeline-extended` | 6-8 event timeline |
 | `msg-contact-layout` | Contact (1-2 persons) |
+| `msg-contact-layout-2x2` | Contact (4 persons, 2x2 grid) |
 | `msg-contact-layout-extended` | Contact (3-8 persons) |
 | `end` | Closing slide |
 
@@ -347,6 +348,46 @@ Robert-Bürkle-Straße 1
 </div>
 ```
 
+**Example: Contact Slide (4 persons, 2x2 grid)**
+
+Use `msg-contact-layout msg-contact-layout-2x2` for exactly 4 contact persons. This extends the base contact layout with a 2x2 grid. Each person is displayed as a horizontal card (photo left, info right) in a 2x2 grid, vertically centered on the left side.
+
+```markdown
+<!-- _class: msg-contact-layout msg-contact-layout-2x2 -->
+
+# Ansprechpartner
+
+<div class="msg-contact-left">
+
+<div class="msg-contact-person">
+<img src="path/to/photo1.jpg" alt="Person 1">
+<div class="msg-contact-info">
+<div class="name">Name Nachname</div>
+<div class="role">Berufsbezeichnung</div>
+<div class="email">name@msg.group</div>
+</div>
+</div>
+
+<!-- Repeat for each contact person (exactly 4) -->
+
+</div>
+
+![contact-bg h:720](themes/assets/contact-msg.png)
+
+<div class="msg-company-info">
+
+**msg systems ag**
+
+Robert-Bürkle-Straße 1
+85737 Ismaning
+
++49 89 96101-0
+
+[info@msg.group](mailto:info@msg.group)
+
+</div>
+```
+
 **Example: Contact Slide (up to 8 persons)**
 
 Use `msg-contact-layout-extended` when you need to display up to 8 contact persons. The contacts are arranged in a 2x4 grid, vertically centered. The company info box remains on the right side.
@@ -393,6 +434,7 @@ Robert-Bürkle-Straße 1
 - Always include the **background image** (`contact-bg`)
 - Choose the appropriate layout based on number of contacts:
   - `msg-contact-layout`: 1-2 persons (larger photos, more detail)
+  - `msg-contact-layout msg-contact-layout-2x2`: 4 persons (2x2 grid, horizontal cards)
   - `msg-contact-layout-extended`: 3-8 persons (compact grid layout)
 
 **Example: Quote/Keymessage Slide**
