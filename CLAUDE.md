@@ -22,10 +22,24 @@ This is a custom Marp theme for creating presentations with msg corporate brandi
 | `doughnut` | Ring chart (3 sections) |
 | `timeline` | 3-event timeline |
 | `timeline-extended` | 6-8 event timeline |
+| `orchestrator` | Hub agent controlling pipeline agents |
 | `msg-contact-layout` | Contact (1-2 persons) |
 | `msg-contact-layout-2x2` | Contact (4 persons, 2x2 grid) |
 | `msg-contact-layout-extended` | Contact (3-8 persons) |
 | `end` | Closing slide |
+
+### Reusable Component Quick Reference
+
+| Component | Use For |
+|-----------|---------|
+| `msg-dual-panel` | Side-by-side phase/comparison panels |
+| `msg-hero-card` + `msg-badge-number` | Numbered or symbol-badged highlight cards |
+| `msg-feature-box` + `use-case` | Feature cards with categorization |
+| `msg-stat-card` | Statistics/metrics display |
+| `msg-label` | Inline technology/tool tags |
+| `msg-grid-2col` / `msg-grid-3col` | Grid layouts |
+| `multicolumn` | Auto-column layout |
+| `footnote` | Source citations at slide bottom |
 
 ## Development Workflow
 
@@ -118,6 +132,7 @@ The theme supports multiple slide types activated via Marp's `<!-- _class: type 
   - Add `<span class="step-arrow">▼</span>` for down arrow indicator
   - Add `<span class="step-label">Label</span>` for text below arrow
   - Use `step-arrow-active` and `step-label-active` classes for highlighted step
+  - **All-active variant**: Use bold+italic (`**_01_**`) and active classes for ALL steps to show a complete process/pipeline where every step is highlighted
 - **Cycle Flow** (`_class: cycle-flow`): Path-based PDCA with waypoint markers
   - Use `.msg-cycle-path` container with `.msg-cycle-waypoint` elements
   - Rounded rectangular track with monochromatic red circle markers (40%, 60%, 80%, 100% opacity)
@@ -154,6 +169,7 @@ Reusable layout components that can be used in any presentation without custom C
 - `.msg-feature-box`: Feature box with bottom-bordered title and optional `.use-case` label (ideal for modes, categorized features)
 - `.msg-hero-card`: Premium card with pink gradient, thick border, and top accent strip (for highlighted content)
   - Combine with `.msg-badge-number` for numbered badges in top-right corner
+  - Badge content can be numbers (`1`, `2`), symbols (`!`, `✓`), or short text
 - `.msg-supporting-card`: Supporting card with left border accent (for secondary content)
 
 **Section Components:**
@@ -173,9 +189,21 @@ Reusable layout components that can be used in any presentation without custom C
 - First column bold and colored in msg-red
 - Alternating row colors for readability
 
+**Dual Panel Layout:**
+- `.msg-dual-panel`: Side-by-side comparison layout with two colored panels
+  - `.msg-dual-panel-row`: Row container for the two panels
+  - `.msg-dual-panel-card`: Individual panel card with color variants (`.petrol`, `.red`)
+  - `.msg-dual-panel-title`: Panel heading text
+  - `.msg-dual-panel-divider`: Horizontal divider line within panel
+  - `.msg-dual-panel-grid`: Grid layout for items within a panel
+  - `.msg-dual-panel-item`: Individual item within the grid
+  - `.msg-dual-panel-plus`: Connector element between panels (e.g., `→`)
+  - `.msg-dual-panel-bar`: Full-width bar below the panels for summary text
+
 **Statistics & Labels:**
 - `.msg-stat-card`: Card for displaying statistics/metrics with `.stat-number` and `.stat-label`
 - `.msg-label`: Inline label/tag component with color variants (`.petrol`, `.yellow`, `.green`, `.purple`, `.pink`, `.gray`)
+  - Also useful without color variant as inline technology/tool tags (e.g., `<span class="msg-label">Tool Name</span>`)
 
 **Flow Layout:**
 - `.msg-flow`: Container for start-to-end process flows
@@ -590,6 +618,109 @@ Ich bin ein kleines Label
 </div>
 ```
 
+**Example: Orchestrator Pipeline Slide**
+```markdown
+<!-- _class: orchestrator -->
+
+# Pipeline Title
+
+<div class="msg-orchestrator">
+
+<div class="msg-orchestrator-hub">
+
+#### Workflow Agent
+
+Description of the orchestrator role
+
+</div>
+
+<div class="msg-orchestrator-agents">
+
+<div class="msg-orchestrator-agent">
+
+**01**
+
+#### Agent Name
+
+Short description
+
+</div>
+
+<!-- Repeat for each agent (typically 3-6) -->
+
+</div>
+
+</div>
+```
+
+**Example: Dual Panel Comparison**
+```markdown
+# Phase A vs Phase B
+
+<div class="msg-dual-panel">
+<div class="msg-dual-panel-row">
+
+<div class="msg-dual-panel-card petrol">
+<div class="msg-dual-panel-title">Planning Phase</div>
+<div class="msg-dual-panel-divider"></div>
+<div class="msg-dual-panel-grid">
+<div class="msg-dual-panel-item">
+
+**01 Analyst**
+Requirements analysieren
+
+</div>
+<div class="msg-dual-panel-item">
+
+**02 Architect**
+Architektur definieren
+
+</div>
+</div>
+</div>
+
+<div class="msg-dual-panel-plus">→</div>
+
+<div class="msg-dual-panel-card red">
+<div class="msg-dual-panel-title">Development Cycle</div>
+<div class="msg-dual-panel-divider"></div>
+<div class="msg-dual-panel-grid">
+<div class="msg-dual-panel-item">
+
+**03 Developer**
+Implementieren
+
+</div>
+<div class="msg-dual-panel-item">
+
+**04 QA Agent**
+Testen & prüfen
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="msg-dual-panel-bar">Summary text spanning full width</div>
+</div>
+```
+
+**Example: Inline Technology Labels**
+```markdown
+<div>
+<span class="msg-label">Tool A</span> <span class="msg-label">Tool B</span> <span class="msg-label">Tool C</span>
+</div>
+```
+
+**Example: Footnote with Source Citations**
+```markdown
+<div class="footnote">
+
+Quellen: Source A 2025, Source B 2025, internal data
+
+</div>
+```
+
 **Example: Statistics Cards**
 ```markdown
 <div class="msg-grid-3col">
@@ -642,6 +773,7 @@ Every presentation created with this theme MUST:
 2. **Start with a Title slide**: First slide must use `<!-- _class: title -->` with background image
 3. **Include an Agenda slide**: Second slide must use `<!-- _class: agenda -->` with numbered topics
 4. **End with a Contact slide**: Last slide must use `<!-- _class: msg-contact-layout -->` with contact information
+   - **Exception**: Presentations that are part of a larger meeting agenda (where only some sections belong to this speaker) may omit the contact/end slide and end with a summary slide instead
 
 **Required Presentation Template:**
 ```markdown

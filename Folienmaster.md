@@ -25,7 +25,7 @@ paginate: true
 2. Kapitelfolien
 3. Inhaltsfolien
 4. Zitat & Keymessage
-5. Statistik & Prozess
+5. Statistik, Prozess & Orchestrator
 6. Timeline & Flow
 7. Kontakt & Abschluss
 
@@ -39,7 +39,7 @@ paginate: true
 2. **Kapitelfolien**
 3. Inhaltsfolien
 4. Zitat & Keymessage
-5. Statistik & Prozess
+5. Statistik, Prozess & Orchestrator
 6. Timeline & Flow
 7. Kontakt & Abschluss
 
@@ -455,9 +455,9 @@ Labels können für Kategorien oder Tags verwendet werden:
 
 <!-- _class: chapter -->
 
-# Statistik & Prozess
+# Statistik, Prozess & Orchestrator
 
-## Statistics, Steps & PDCA
+## Statistics, Steps, PDCA & Pipeline
 
 ![chapter h:720](themes/assets/chapter-msg.png)
 
@@ -545,6 +545,78 @@ Ergebnisse prüfen und bewerten
 #### Act
 
 Anpassungen vornehmen
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: orchestrator -->
+
+# Orchestrator **Pipeline**
+
+<div class="msg-orchestrator">
+
+<div class="msg-orchestrator-hub">
+
+#### Workflow Agent
+
+Steuert und orchestriert alle spezialisierten Agenten
+
+</div>
+
+<div class="msg-orchestrator-agents">
+
+<div class="msg-orchestrator-agent">
+
+**01**
+
+#### Planner
+
+Anforderungen analysieren und Plan erstellen
+
+</div>
+
+<div class="msg-orchestrator-agent">
+
+**02**
+
+#### Builder
+
+Skelett-Code mit Struktur generieren
+
+</div>
+
+<div class="msg-orchestrator-agent">
+
+**03**
+
+#### Tester
+
+Tests schreiben und validieren
+
+</div>
+
+<div class="msg-orchestrator-agent">
+
+**04**
+
+#### Coder
+
+Implementierung bis alle Tests grün
+
+</div>
+
+<div class="msg-orchestrator-agent">
+
+**05**
+
+#### Reviewer
+
+Qualität und Coverage prüfen
+
+</div>
 
 </div>
 
