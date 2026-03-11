@@ -882,18 +882,75 @@ Each presentation should be in its own subfolder:
 presentations/
 ├── msg/
 │   ├── marp-for-business/
+│   │   ├── CLAUDE.md
 │   │   ├── MARP for Business.md
 │   │   └── moritz.jpg
 │   └── claude-vw/
+│       ├── CLAUDE.md
 │       ├── ClaudeCode VW.md
 │       └── contact.jpg
-└── personal/
-    ├── ikos-poznan/
-    │   ├── IKoS-Poznan.md
-    │   └── moritz.jpg
+└── rohde-consulting/
+    ├── techdevcircle-ai-coding/
+    │   ├── CLAUDE.md
+    │   └── TechDevCircle-AI-Coding.md
     └── tech-talk/
+        ├── CLAUDE.md
         └── Tech-Talk.md
 ```
+
+### Per-Presentation CLAUDE.md
+
+**Rule**: When creating a new presentation folder, always create a `CLAUDE.md` in that folder. This file captures all presentation-specific context so that future sessions can work effectively without re-analyzing the entire presentation.
+
+**Template:**
+```markdown
+# [Presentation Title]
+
+## Metadata
+- **Language**: German / English
+- **Audience**: [Target group — e.g. Technical VW stakeholders, Business consultants, Mixed]
+- **Tone**: [e.g. Professional, Educational, Casual, Technical]
+- **Date / Event**: [When and where this will be presented]
+
+## Slide Structure
+<!-- Ordered overview of all slides with their types -->
+1. Title (`title`)
+2. Agenda (`agenda`)
+3. Chapter: Topic A (`chapter`)
+4-6. Content slides for Topic A
+7. Chapter: Topic B (`chapter`)
+8-10. Content slides for Topic B
+11. Contact (`msg-contact-layout`)
+
+## Key Layout Components
+<!-- Which msg components are used prominently -->
+- `msg-hero-card` with `msg-badge-number` for key takeaways
+- `msg-grid-2col` for feature comparisons
+- Tables for tool comparisons
+
+## Content Notes
+<!-- Specific constraints, terminology, key messages, things to remember -->
+- Use "Agentische KI" not "Agentic AI" (German terminology preferred)
+- Key message: ...
+- Avoid mentioning competitor X
+- Max 20 slides for 30-minute slot
+
+## Contact Person(s)
+- **Name**: Max Mustermann
+- **Role**: Senior Consultant
+- **Email**: max.mustermann@msg.group
+
+## Assets
+<!-- Local files in this folder -->
+- `moritz.jpg` — Contact photo
+- `architecture.png` — System architecture diagram
+```
+
+**Guidelines:**
+- Keep the CLAUDE.md concise — it should be scannable in under 30 seconds
+- Update the slide structure whenever slides are added, removed, or reordered
+- Content Notes is the most important section — capture anything that a future session would need to know
+- The template is a starting point; add or remove sections as needed for the specific presentation
 
 ### Asset References from Presentation Folders
 When presentations are in `presentations/msg/<name>/` or `presentations/rohde-consulting/<name>/`, use relative paths to theme assets:
